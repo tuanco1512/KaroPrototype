@@ -26,54 +26,63 @@
     &:hover {
       cursor: pointer;
     }
+
+    .avatar {
+      width: 48px;
+      aspect-ratio: 1;
+      object-fit: cover;
+      border-radius: 50%;
+    }
+
+    .profile-info {
+      display: flex;
+      flex-direction: column;
+      margin: auto 0;
+    }
+
+    .profile-name {
+      font: 700 16px/140% "Plus Jakarta Sans", sans-serif;
+    }
+
+    .profile-role {
+      margin-top: 5px;
+      font: 500 12px/135% "Plus Jakarta Sans", sans-serif;
+    }
   }
 
-  .avatar {
-    width: 48px;
-    aspect-ratio: 1;
-    object-fit: cover;
-    border-radius: 50%;
+  .scroll-box {
+    overflow-y: scroll;
+
+    .menu-list:hover{
+      background: var(--BG-Light-w-Blue, #ebf3ff);
+      .menu-item{
+        color: #1d61cc;
+      }
+      path{
+        fill: #1d61cc;
+      }
+    }
+
+    &::-webkit-scrollbar {
+      background-color: transparent;
+      width: 0;
+    }
   }
 
-  .profile-info {
-    display: flex;
-    flex-direction: column;
-    margin: auto 0;
-  }
+  .scroll-box:hover {
+    &::-webkit-scrollbar {
+      width: 8px;
+    }
 
-  .profile-name {
-    font: 700 16px/140% "Plus Jakarta Sans", sans-serif;
-  }
-
-  .profile-role {
-    margin-top: 5px;
-    font: 500 12px/135% "Plus Jakarta Sans", sans-serif;
+    &::-webkit-scrollbar-thumb {
+      background-color: rgba(0, 0, 0, .2)
+    }
   }
 
   .explore-section {
     display: flex;
     margin-top: 24px;
     flex-direction: column;
-
-    .scroll-box {
-      overflow-y: scroll;
-      height: 150px;
-
-      &::-webkit-scrollbar {
-        background-color: transparent;
-        width: 0;
-      }
-    }
-
-    .scroll-box:hover {
-      &::-webkit-scrollbar {
-        width: 8px;
-      }
-
-      &::-webkit-scrollbar-thumb {
-        background-color: rgba(0, 0, 0, .2)
-      }
-    }
   }
 
   .section-title {
@@ -84,7 +93,7 @@
     font: 700 11px/150% "Plus Jakarta Sans", sans-serif;
   }
 
-  .suggested-homes, .buyer-requests, .interested-properties, .for-sale-properties, .buyer-requests-manage, .customers, .property-profiles, .consignment {
+  .menu-list {
     border-radius: 8px;
     display: flex;
     align-items: center;
@@ -141,26 +150,6 @@
     color: var(--Main-Color-Secondary, #100a55);
     font-weight: 600;
     line-height: 150%;
-
-    .scroll-box {
-      overflow-y: scroll;
-      height: 200px;
-
-      &::-webkit-scrollbar {
-        background-color: transparent;
-        width: 0;
-      }
-    }
-
-    .scroll-box:hover {
-      &::-webkit-scrollbar {
-        width: 8px;
-      }
-
-      &::-webkit-scrollbar-thumb {
-        background-color: rgba(0, 0, 0, .2)
-      }
-    }
   }
 
   .services-section {
@@ -211,7 +200,7 @@
   display: flex;
   padding: 40px;
   flex-direction: column;
-  gap: 25px;
+  gap: 30px;
   align-self: stretch;
   width: calc(100% - 298px);
   background: #FFF;
@@ -219,351 +208,389 @@
   right: 0;
   box-sizing: border-box;
 
-  .suggested-homes-container {
+  .house-suggestion-header{
     display: flex;
-    gap: 20px;
-    align-self: stretch;
-
-    .suggested-homes-title {
-      color: var(--Main-Color-Black, #000929);
-      flex: 1;
-      font-size: 24px;
-      font-weight: 700;
-      justify-content: center;
-      line-height: 140%;
-      margin: auto 0;
-    }
-
-    .search-container {
-      color: var(--Text-Grey, rgba(0, 9, 41, 0.7));
-      display: flex;
-      flex: 1;
-      flex-direction: column;
-      font-size: 16px;
-      font-weight: 500;
-      justify-content: center;
-      line-height: 150%;
-    }
-
-    .search-input-container {
-      background-color: var(--BG-Light-Blue, #f5f9ff);
-      border: 1px solid rgba(230, 240, 255, 1);
-      border-radius: 8px;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      padding: 12px 14px;
-    }
-
-    .search-input {
-      border: none;
-      outline: none;
-      background-color: var(--BG-Light-Blue, #f5f9ff);
-      width: 100%;
-      color: var(--Text-Grey, rgba(0, 9, 41, 0.70));
-      font-family: Plus Jakarta Sans, sans-serif;
-      font-size: 16px;
-      font-style: normal;
-      font-weight: 500;
-      line-height: 150%; /* 24px */
-    }
-  }
-
-  .divider {
-    height: 1px;
-    background: var(--Border-Dark-Purple, #F0EFFB);
-  }
-
-  .location-selector {
-    display: flex;
-    justify-content: space-between;
-    align-self: stretch;
-    gap: 10px;
-    font-size: 14px;
-
-    .location-list {
-      display: flex;
-      gap: 10px;
-      line-height: 24px;
-    }
-
-    .location-label {
-      color: var(--Dark-1st, #000929);
-      font-weight: 600;
-      width: 130px;
-      display: flex;
-    }
-
-    .location-options {
+    flex-direction: column;
+    gap: 25px;
+    .suggested-homes-container {
       display: flex;
       gap: 20px;
-      color: var(--Text-Light-Grey, rgba(0, 9, 41, 0.5));
-      font-weight: 500;
-      text-align: center;
-      justify-content: space-between;
+      align-self: stretch;
 
-      &:hover {
-        cursor: pointer;
+      .suggested-homes-title {
+        color: var(--Main-Color-Black, #000929);
+        flex: 1;
+        font-size: 24px;
+        font-weight: 700;
+        justify-content: center;
+        line-height: 140%;
+        margin: auto 0;
       }
-    }
 
-    .selected {
-      color: var(--Blue-3rd, #1d61cc);
-      font-weight: 600;
-    }
+      .search-container {
+        color: var(--Text-Grey, rgba(0, 9, 41, 0.7));
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+        font-size: 16px;
+        font-weight: 500;
+        justify-content: center;
+        line-height: 150%;
+      }
 
-    .location-change {
-      display: flex;
-      justify-content: end;
-      gap: 10px;
-      color: var(--Blue-2nd, #002f7a);
-      font-weight: 500;
-      text-align: center;
-      align-items: center;
-    }
-  }
-
-  .price-filter, .price-acreage-filter, .acreage-filter, .home-type-filter {
-    display: flex;
-    gap: 10px;
-    justify-content: space-between;
-
-    .price-filter-title {
-      color: var(--Dark-1st, #000929);
-      font-family: Plus Jakarta Sans, sans-serif;
-      font-weight: 600;
-      line-height: 24px;
-      width: 130px;
-      display: flex;
-    }
-
-    .price-options {
-      width: 725px;
-      display: grid;
-      grid-template-columns: repeat(5, 1fr);
-      gap: 20px;
-      font-weight: 500;
-      text-align: center;
-
-      .check-box-container {
+      .search-input-container {
+        background-color: var(--BG-Light-Blue, #f5f9ff);
+        border: 1px solid rgba(230, 240, 255, 1);
+        border-radius: 8px;
         display: flex;
         align-items: center;
-        gap: 5px;
+        gap: 10px;
+        padding: 12px 14px;
+      }
+
+      .search-input {
+        border: none;
+        outline: none;
+        background-color: var(--BG-Light-Blue, #f5f9ff);
+        width: 100%;
         color: var(--Text-Grey, rgba(0, 9, 41, 0.70));
-        text-align: center;
-        font-size: 14px;
+        font-family: Plus Jakarta Sans, sans-serif;
+        font-size: 16px;
+        font-style: normal;
         font-weight: 500;
-        padding-left: 35px;
-        cursor: pointer;
-        position: relative;
-        box-sizing: border-box;
+        line-height: 150%; /* 24px */
+      }
+    }
 
-        input {
-          position: absolute;
-          opacity: 0;
+    .home-filter-wrapper{
+      display: flex;
+      flex-direction: column;
+      gap: 25px;
+    }
+
+    .divider {
+      height: 1px;
+      background: var(--Border-Dark-Purple, #F0EFFB);
+    }
+
+    .location-selector {
+      display: flex;
+      justify-content: space-between;
+      align-self: stretch;
+      gap: 10px;
+      font-size: 14px;
+
+      .location-list {
+        display: flex;
+        gap: 10px;
+        line-height: 24px;
+      }
+
+      .location-label {
+        color: var(--Dark-1st, #000929);
+        font-weight: 600;
+        width: 130px;
+        display: flex;
+      }
+
+      .location-options {
+        display: flex;
+        gap: 20px;
+        color: var(--Text-Light-Grey, rgba(0, 9, 41, 0.5));
+        font-weight: 500;
+        text-align: center;
+        justify-content: space-between;
+
+        .location-option:hover{
+          color: #1d61cc;
+        }
+      }
+
+      .selected {
+        color: var(--Blue-3rd, #1d61cc);
+        font-weight: 600;
+      }
+
+      .location-change {
+        display: flex;
+        justify-content: end;
+        gap: 10px;
+        color: var(--Blue-2nd, #002f7a);
+        font-weight: 500;
+        text-align: center;
+        align-items: center;
+      }
+    }
+
+    .home-filter {
+      display: flex;
+
+      .home-filter-section{
+        display: flex;
+        flex-grow: 1;
+      }
+
+      .price-filter-title {
+        color: var(--Dark-1st, #000929);
+        font-family: Plus Jakarta Sans, sans-serif;
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 24px;
+        width: 100%;
+        max-width: 130px;
+        display: flex;
+        flex-shrink: 0;
+      }
+
+      .price-options-wrapper{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 25px;
+        flex-grow: 1;
+      }
+
+      .price-options {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        width: 100%;
+        max-width: 725px;
+        gap: 20px;
+        font-weight: 500;
+        text-align: center;
+
+        .check-box-container {
+          display: flex;
+          align-items: center;
+          gap: 5px;
+          color: var(--Text-Grey, rgba(0, 9, 41, 0.70));
+          text-align: center;
+          font-size: 14px;
+          font-weight: 500;
+          padding-left: 35px;
           cursor: pointer;
-          height: 0;
-          width: 0;
+          position: relative;
+          box-sizing: border-box;
 
-          &:checked ~ .checkmark {
-            background-color: #FF5358;
+          input {
+            position: absolute;
+            opacity: 0;
+            cursor: pointer;
+            height: 0;
+            width: 0;
 
-            &:after {
-              display: block;
+            &:checked ~ .checkmark {
+              background-color: #FF5358;
+              border: 1.5px solid #FF5358;
+
+              &:after {
+                display: block;
+              }
             }
           }
+
+          .checkmark {
+            position: absolute;
+            left: 0;
+            width: 20px;
+            height: 20px;
+            border-radius: 4px;
+            border: 1.5px solid var(--Grey-7th, #A9A9A9);
+            background-color: var(--Main-Color-White, #FFF);
+
+            &:after {
+              content: "";
+              position: absolute;
+              display: none;
+              left: 6px;
+              top: 2px;
+              width: 5px;
+              height: 10px;
+              border: solid white;
+              border-width: 0 3px 3px 0;
+              transform: rotate(45deg);
+            }
+          }
+
+          &:hover input ~ .checkmark {
+            background: #ccc;
+          }
+
+          &:hover input:checked ~ .checkmark {
+            background: #FF5358;
+          }
+        }
+      }
+
+      .price-options.expand {
+        display: none;
+      }
+
+      .price-filter-options {
+        display: none;
+        gap: 14px;
+        width: 536px;
+        align-items: center;
+
+        .price-filter-label {
+          color: var(--Text-Light-Grey, rgba(0, 9, 41, 0.5));
+          margin: auto 0;
+          font: 500 14px Plus Jakarta Sans, -apple-system, Roboto, Helvetica, sans-serif;
         }
 
-        .checkmark {
-          position: absolute;
-          left: 0;
-          width: 20px;
-          height: 20px;
-          border-radius: 4px;
-          border: 1.5px solid var(--Grey-7th, #A9A9A9);
-          background-color: var(--Main-Color-White, #FFF);
+        .price-filter-from {
+          border-radius: 6px;
+          border: 1px solid rgba(169, 169, 169, 1);
+          display: flex;
+          gap: 14px;
+          white-space: nowrap;
+          flex: 1;
+          padding: 10px 12px;
 
-          &:after {
-            content: "";
-            position: absolute;
-            display: none;
-            left: 6px;
-            top: 2px;
-            width: 5px;
-            height: 10px;
-            border: solid white;
-            border-width: 0 3px 3px 0;
-            transform: rotate(45deg);
+          .price-filter-from-label {
+            width: 100%;
+            color: var(--Text-Light-Grey, rgba(0, 9, 41, 0.5));
+            letter-spacing: -0.07px;
+            flex: 1;
+            font: 500 13px/145% Plus Jakarta Sans, -apple-system, Roboto, Helvetica, sans-serif;
+            border: none;
+            outline: none;
+          }
+
+          .price-filter-from-value {
+            color: var(--Blue-Darkest, #03102a);
+            margin: auto 0;
+            font: 600 12px/120% Plus Jakarta Sans, -apple-system, Roboto, Helvetica, sans-serif;
           }
         }
 
-        &:hover input ~ .checkmark {
-          background: #ccc;
-        }
-
-        &:hover input:checked ~ .checkmark {
-          background: #FF5358;
-        }
-      }
-    }
-
-    .price-options.expand {
-      display: none;
-    }
-
-    .price-filter-options {
-      display: none;
-      gap: 14px;
-      width: 536px;
-      align-items: center;
-
-      .price-filter-label {
-        color: var(--Text-Light-Grey, rgba(0, 9, 41, 0.5));
-        margin: auto 0;
-        font: 500 14px Plus Jakarta Sans, -apple-system, Roboto, Helvetica, sans-serif;
-      }
-
-      .price-filter-from {
-        border-radius: 6px;
-        border: 1px solid rgba(169, 169, 169, 1);
-        display: flex;
-        gap: 14px;
-        white-space: nowrap;
-        flex: 1;
-        padding: 10px 12px;
-
-        .price-filter-from-label {
-          width: 100%;
-          color: var(--Text-Light-Grey, rgba(0, 9, 41, 0.5));
-          letter-spacing: -0.07px;
-          flex: 1;
-          font: 500 13px/145% Plus Jakarta Sans, -apple-system, Roboto, Helvetica, sans-serif;
-          border: none;
-          outline: none;
-        }
-
-        .price-filter-from-value {
-          color: var(--Blue-Darkest, #03102a);
+        .price-filter-separator {
+          color: #000;
           margin: auto 0;
-          font: 600 12px/120% Plus Jakarta Sans, -apple-system, Roboto, Helvetica, sans-serif;
+          font: 500 14px Plus Jakarta Sans, -apple-system, Roboto, Helvetica, sans-serif;
         }
-      }
 
-      .price-filter-separator {
-        color: #000;
-        margin: auto 0;
-        font: 500 14px Plus Jakarta Sans, -apple-system, Roboto, Helvetica, sans-serif;
-      }
-
-      .price-filter-to {
-        border-radius: 6px;
-        border: 1px solid rgba(169, 169, 169, 1);
-        display: flex;
-        gap: 14px;
-        white-space: nowrap;
-        flex: 1;
-        padding: 10px 12px;
-
-        .price-filter-to-label {
-          color: var(--Text-Light-Grey, rgba(0, 9, 41, 0.5));
-          letter-spacing: -0.07px;
+        .price-filter-to {
+          border-radius: 6px;
+          border: 1px solid rgba(169, 169, 169, 1);
+          display: flex;
+          gap: 14px;
+          white-space: nowrap;
           flex: 1;
-          font: 500 13px/145% Plus Jakarta Sans, -apple-system, Roboto, Helvetica, sans-serif;
-          width: 100%;
-          border: none;
-          outline: none;
+          padding: 10px 12px;
+
+          .price-filter-to-label {
+            color: var(--Text-Light-Grey, rgba(0, 9, 41, 0.5));
+            letter-spacing: -0.07px;
+            flex: 1;
+            font: 500 13px/145% Plus Jakarta Sans, -apple-system, Roboto, Helvetica, sans-serif;
+            width: 100%;
+            border: none;
+            outline: none;
+          }
+
+          .price-filter-to-value {
+            color: var(--Blue-Darkest, #03102a);
+            margin: auto 0;
+            font: 600 12px/120% Plus Jakarta Sans, -apple-system, Roboto, Helvetica, sans-serif;
+          }
+
         }
 
-        .price-filter-to-value {
-          color: var(--Blue-Darkest, #03102a);
-          margin: auto 0;
-          font: 600 12px/120% Plus Jakarta Sans, -apple-system, Roboto, Helvetica, sans-serif;
-        }
-
-      }
-
-      .price-filter-apply {
-        border-radius: 6px;
-        background-color: var(--Blue-2nd, #002f7a);
-        display: flex;
-        flex-direction: column;
-        font-size: 13px;
-        color: #fff;
-        font-weight: 500;
-        justify-content: center;
-        padding: 9px 8px;
-
-        .price-filter-apply-text {
-          font-family: Plus Jakarta Sans, sans-serif;
+        .price-filter-apply {
+          border-radius: 6px;
+          background-color: var(--Blue-2nd, #002f7a);
+          display: flex;
+          flex-direction: column;
+          font-size: 13px;
+          color: #fff;
+          font-weight: 500;
           justify-content: center;
+          padding: 9px 8px;
+
+          .price-filter-apply-text {
+            font-family: Plus Jakarta Sans, sans-serif;
+            justify-content: center;
+            padding: 3px 10px;
+          }
+
+          &:hover {
+            opacity: 0.8;
+          }
+        }
+
+        .price-filter-clear {
+          color: var(--Text-Grey, rgba(0, 9, 41, 0.7));
+          white-space: nowrap;
+          justify-content: center;
+          margin: auto 0;
           padding: 3px 10px;
+          font: 500 14px Plus Jakarta Sans, -apple-system, Roboto, Helvetica, sans-serif;
+
+          &:hover {
+            opacity: 0.8;
+          }
         }
 
-        &:hover {
-          opacity: 0.8;
-        }
       }
 
-      .price-filter-clear {
-        color: var(--Text-Grey, rgba(0, 9, 41, 0.7));
-        white-space: nowrap;
-        justify-content: center;
-        margin: auto 0;
-        padding: 3px 10px;
-        font: 500 14px Plus Jakarta Sans, -apple-system, Roboto, Helvetica, sans-serif;
+      .more-options {
+        display: flex;
+        flex-shrink: 0;
+        gap: 10px;
+        align-items: center;
+        cursor: pointer;
 
-        &:hover {
-          opacity: 0.8;
+        .more-label {
+          color: var(--Text-Light-Grey, rgba(0, 9, 41, 0.50));
+          text-align: center;
+          font-size: 14px;
+          font-weight: 500;
         }
       }
-
     }
 
-    .more-options {
+    .bedRoom, .WC, .sample, .location {
+      display: none;
+    }
+
+    .filter-wrapper {
+      justify-content: space-between;
+      display: flex;
+      width: 100%;
+      gap: 15px;
+
+      .filter-arrow {
+        transition: all 0.3s linear;
+      }
+    }
+
+    .filter-buttons,
+    .default-reset {
+      border-radius: 10px;
+      border: 2px solid rgba(240, 239, 251, 1);
+      background-color: #fff;
       display: flex;
       gap: 10px;
+      padding: 11px 19px;
       align-items: center;
       cursor: pointer;
+    }
 
-      .more-label {
-        color: var(--Text-Light-Grey, rgba(0, 9, 41, 0.50));
-        text-align: center;
-        font-size: 14px;
-        font-weight: 500;
+    .filter-text,
+    .default-text {
+      font-family: Plus Jakarta Sans, sans-serif;
+    }
+
+    .results-count {
+      color: var(--Text-Grey, rgba(0, 9, 41, 0.70));
+      text-align: center;
+      margin: auto 0;
+      font: 600 16px Plus Jakarta Sans, -apple-system, Roboto, Helvetica, sans-serif;
+
+      span {
+        color: var(--Blue-3rd, #1D61CC);
       }
     }
-  }
-
-  .bedRoom, .WC, .sample, .location {
-    display: none;
-  }
-
-  .filter-wrapper {
-    justify-content: space-between;
-    display: flex;
-    width: 100%;
-    gap: 15px;
-
-    .filter-arrow {
-      transition: all 0.3s linear;
-    }
-  }
-
-  .filter-buttons,
-  .default-reset {
-    border-radius: 10px;
-    border: 2px solid rgba(240, 239, 251, 1);
-    background-color: #fff;
-    display: flex;
-    gap: 10px;
-    padding: 11px 19px;
-    align-items: center;
-    cursor: pointer;
-  }
-
-  .filter-text,
-  .default-text {
-    font-family: Plus Jakarta Sans, sans-serif;
   }
 
   .interested-post {
@@ -571,15 +598,15 @@
     justify-content: space-between;
 
     .title {
-      color: var(--Main-Color-Black, #000929);
-      display: flex;
-      flex: 1;
-      flex-direction: column;
-      font-size: 24px;
-      font-weight: 700;
-      justify-content: center;
-      line-height: 140%;
-      margin: auto 0;
+      .suggested-homes-title {
+        color: var(--Main-Color-Black, #000929);
+        flex: 1;
+        font-size: 24px;
+        font-weight: 700;
+        justify-content: center;
+        line-height: 140%;
+        margin: auto 0;
+      }
     }
 
     .create-post-button {
@@ -596,23 +623,22 @@
     }
   }
 
-  .tag-result {
+  .tag-results {
     display: flex;
     align-items: flex-start;
     gap: 10px;
     align-self: stretch;
 
-    .sell-tag-result {
+    .tag-result {
       display: flex;
       padding: 11px 20px;
-      justify-content: center;
       align-items: center;
       gap: 10px;
       border-radius: 10px;
-      background: var(--Red-2nd, #FF5358);
+      background: var(--BG-Light-Blue, #F5F9FF);
 
-      .sell-tag-text {
-        color: var(--Main-Color-White, #FFF);
+      .tag-text {
+        color: var(--Text-Black-2nd, #100029);
         text-align: center;
         font-size: 16px;
         font-style: normal;
@@ -620,8 +646,8 @@
         line-height: normal;
       }
 
-      .sell-tag-count {
-        color: var(--Red-Red-Light, #FFF0F0);
+      .tag-count {
+        color: var(--Text-Light-Grey, rgba(0, 9, 41, 0.50));
         font-feature-settings: 'clig' off, 'liga' off;
         font-size: 16px;
         font-style: normal;
@@ -631,31 +657,14 @@
       }
     }
 
-    .buy-tag-result {
-      display: flex;
-      padding: 11px 20px;
-      align-items: center;
-      gap: 10px;
-      border-radius: 10px;
-      background: var(--BG-Light-Blue, #F5F9FF);
-
-      .buy-tag-text {
-        color: var(--Text-Black-2nd, #100029);
-        text-align: center;
-        font-size: 16px;
-        font-style: normal;
-        font-weight: 700;
-        line-height: normal;
+    .tag-result.active{
+      background: var(--Red-2nd, #FF5358);
+      .tag-text{
+        color: var(--Main-Color-White, #FFF);
       }
 
-      .buy-tag-count {
-        color: var(--Text-Light-Grey, rgba(0, 9, 41, 0.50));
-        font-feature-settings: 'clig' off, 'liga' off;
-        font-size: 16px;
-        font-style: normal;
-        font-weight: 800;
-        line-height: 18px; /* 112.5% */
-        letter-spacing: 0.43px;
+      .tag-count{
+        color: var(--Red-Red-Light, #FFF0F0);
       }
     }
   }
@@ -695,17 +704,6 @@
       font-size: 16px;
       font-style: normal;
       font-weight: 500;
-    }
-  }
-
-  .results-count {
-    color: var(--Text-Grey, rgba(0, 9, 41, 0.70));
-    text-align: center;
-    margin: auto 0;
-    font: 600 16px Plus Jakarta Sans, -apple-system, Roboto, Helvetica, sans-serif;
-
-    span {
-      color: var(--Blue-3rd, #1D61CC);
     }
   }
 
@@ -765,7 +763,6 @@
       border-radius: 9px;
       cursor: pointer;
       background: #F5F9FF;
-      border: none;
       outline: none;
       box-shadow: 0 10px 25px rgba(124, 130, 141, 0.2);
       font-size: 15px;
@@ -823,7 +820,7 @@
       display: flex;
 
       .property-image {
-        width: 30%;
+        width: 313px;
         position: relative;
 
         img {
@@ -841,10 +838,19 @@
       }
 
       .property-info {
-        width: 70%;
+        width: 100%;
         display: flex;
         flex-direction: column;
+        gap: 20px;
         padding: 20px 30px;
+        box-sizing: border-box;
+
+        .property-info-header{
+          display: flex;
+          flex-direction: column;
+          gap: 17px;
+          position: relative;
+        }
 
         .status-container.light-green {
           background-color: var(--Green-Light, #f0ffe8);
@@ -855,7 +861,6 @@
           font-weight: 500;
           gap: 7px;
           padding: 5px 15px;
-          margin-bottom: 17px;
           width: fit-content;
 
           .green-dot {
@@ -883,7 +888,6 @@
           font-weight: 500;
           gap: 7px;
           padding: 5px 15px;
-          margin-bottom: 17px;
           width: fit-content;
 
           .yellow-dot {
@@ -911,7 +915,6 @@
           font-weight: 500;
           gap: 7px;
           padding: 5px 15px;
-          margin-bottom: 17px;
           width: fit-content;
 
           .status-text {
@@ -923,7 +926,7 @@
           }
         }
 
-        .status-container.red{
+        .status-container.red {
           border-radius: 8px;
           background: var(--Red-Red-Light, #FFF0F0);
           display: flex;
@@ -932,7 +935,6 @@
           font-weight: 500;
           gap: 7px;
           padding: 5px 15px;
-          margin-bottom: 17px;
           width: fit-content;
 
           .red-dot {
@@ -956,27 +958,13 @@
           font: 700 18px/30px "Plus Jakarta Sans", sans-serif;
         }
 
-        .property-location-price {
-          display: flex;
-          justify-content: space-between;
-          margin-top: 17px;
-          gap: 20px;
-
-          .property-location {
-            color: rgba(0, 9, 41, 0.7);
-            font: 500 16px/150% "Plus Jakarta Sans", sans-serif;
-          }
-
-          .property-price {
-            color: #ec1f25;
-            font: 800 24px "Plus Jakarta Sans", sans-serif;
-            letter-spacing: -0.24px;
-          }
+        .property-location {
+          color: rgba(0, 9, 41, 0.7);
+          font: 500 16px/150% "Plus Jakarta Sans", sans-serif;
         }
 
         .property-attributes {
           display: flex;
-          margin-top: 5px;
           gap: 8px;
           font-size: 15px;
           line-height: 140%;
@@ -1007,19 +995,38 @@
         }
 
         .property-price-per-sqm {
-          color: #000929;
-          font-weight: 500;
+          display: flex;
+          flex-direction: column;
+          align-items: flex-end;
+          gap: 5px;
+          position: absolute;
+          right: 0;
+          bottom: 0;
 
-          span {
-            font-weight: 700;
+          .property-price{
+            color: var(--Red-Primary, #EC1F25);
+            font-size: 24px;
+            font-weight: 800;
+            letter-spacing: -0.24px;
+          }
+
+          .property-per-sqm{
+            color: var(--Text-Light-Grey, rgba(0, 9, 41, 0.50));
+            font-size: 15px;
+            font-weight: 500;
+            line-height: 140%; /* 21px */
+
+            span{
+              color: var(--Text-Black, #000929);
+              font-size: 15px;
+              font-weight: 700;
+              line-height: 140%;
+            }
           }
         }
 
         .sell-tag {
-          display: flex;
           padding: 5px 10px;
-          align-items: center;
-          gap: 5px;
           border-radius: 6px;
           background: var(--Red-2nd, #FF5358);
           color: #FFF;
@@ -1027,13 +1034,11 @@
           font-weight: 600;
           line-height: normal;
           box-sizing: border-box;
+          margin-right: 6px;
         }
 
         .confirm-tag {
-          display: flex;
           padding: 5px 10px;
-          align-items: center;
-          gap: 5px;
           border-radius: 6px;
           background: var(--Green-4th, #CDFFB6);
           color: var(--Text-Black, #000929);
@@ -1048,13 +1053,12 @@
     .property-separator {
       height: 1px;
       background-color: #f0effb;
-      margin-top: 20px;
     }
 
     .property-agent-actions {
+      align-items: center;
       display: flex;
       justify-content: space-between;
-      margin-top: 20px;
       gap: 10px;
       width: 100%;
 
@@ -1175,7 +1179,7 @@
         .action-reset,
         .action-show-detail,
         .action-fix,
-        .action-open{
+        .action-open {
           background-color: #ebf3ff;
           border-radius: 8px;
           padding: 8px 16px;
@@ -1209,10 +1213,7 @@
 
   .property-card.buyer {
     .property-info {
-      width: 100%;
-      display: flex;
-      flex-direction: column;
-      padding: 20px 30px;
+      gap: 15px;
 
       .property-price-per-sqm {
         color: var(--Text-Light-Grey, rgba(0, 9, 41, 0.50));
@@ -1255,6 +1256,10 @@
             }
           }
         }
+      }
+
+      .property-info-header{
+        gap: 15px;
       }
     }
   }

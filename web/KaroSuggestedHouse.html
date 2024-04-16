@@ -9,20 +9,19 @@
 </head>
 <body>
 <div class="container">
-    <aside class="sidebar">
-        <section class="profile">
+    <div class="sidebar">
+        <div class="profile">
             <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/dbceeb21f5fd4d8944c4dd2c85501d7ec680dddc6350b6b676fdcaa636e9146c?apiKey=920882dcfad3481c92479faa3271aff5&"
                  alt="User avatar" class="avatar"/>
             <div class="profile-info">
                 <h2 class="profile-name">Vũ minh anh tuấn</h2>
                 <p class="profile-role">Công cụ quản lý</p>
             </div>
-        </section>
-
-        <section class="explore-section">
-            <h3 class="section-title">KHÁM PHÁ</h3>
-            <div class="scroll-box">
-                <div class="list suggested-homes active">
+        </div>
+        <div class="scroll-box">
+            <div class="explore-section">
+                <h3 class="section-title">KHÁM PHÁ</h3>
+                <div class="menu-list suggested-homes active">
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21" fill="none">
                         <path d="M9.16659 17.0834V3.91675C9.16659 2.66675 8.63325 2.16675 7.30825 2.16675H3.94159C2.61659 2.16675 2.08325 2.66675 2.08325 3.91675V17.0834C2.08325 18.3334 2.61659 18.8334 3.94159 18.8334H7.30825C8.63325 18.8334 9.16659 18.3334 9.16659 17.0834Z"
                               fill="#8482A8"/>
@@ -33,7 +32,7 @@
                     </svg>
                     <span class="menu-item">Kho nhà gợi ý</span>
                 </div>
-                <div class="list buyer-requests">
+                <div class="menu-list buyer-requests">
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21" fill="none">
                         <path d="M15.675 5.70832H16.8084C16.65 5.48332 16.4834 5.27498 16.3084 5.06665L15.675 5.70832Z"
                               fill="#8482A8"/>
@@ -54,7 +53,7 @@
                     </svg>
                     <span class="menu-item">Khách hàng tìm mua</span>
                 </div>
-                <div class="list interested-properties">
+                <div class="menu-list interested-properties">
                     <svg xmlns="http://www.w3.org/2000/svg" width="18" height="15" viewBox="0 0 18 15" fill="none">
                         <path d="M2.59837 2.19675C2.25014 2.54497 1.97391 2.95837 1.78546 3.41335C1.597 3.86832 1.5 4.35596 1.5 4.84842C1.5 5.34088 1.597 5.82852 1.78546 6.28349C1.97391 6.73847 2.25014 7.15187 2.59837 7.50009L9.00003 13.9018L15.4017 7.50009C16.105 6.79682 16.5001 5.84299 16.5001 4.84842C16.5001 3.85385 16.105 2.90002 15.4017 2.19675C14.6984 1.49349 13.7446 1.0984 12.75 1.0984C11.7555 1.0984 10.8016 1.49349 10.0984 2.19675L9.00003 3.29509L7.9017 2.19675C7.55348 1.84853 7.14008 1.5723 6.68511 1.38384C6.23013 1.19539 5.74249 1.09839 5.25003 1.09839C4.75757 1.09839 4.26993 1.19539 3.81496 1.38384C3.35998 1.5723 2.94659 1.84853 2.59837 2.19675Z"
                               fill="#8482A8" stroke="#8482A8" stroke-width="2" stroke-linecap="round"
@@ -63,14 +62,10 @@
                     <span class="menu-item">Tin đang quan tâm</span>
                 </div>
             </div>
-        </section>
-
-        <div class="divider" aria-hidden="true"></div>
-
-        <section class="manage-section">
-            <h3 class="section-title">QUẢN LÝ</h3>
-            <div class="scroll-box">
-                <div class="list for-sale-properties">
+            <div class="divider" aria-hidden="true"></div>
+            <div class="manage-section">
+                <h3 class="section-title">QUẢN LÝ</h3>
+                <div class="menu-list for-sale-properties">
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21" fill="none">
                         <path d="M15.675 5.70832H16.8084C16.65 5.48332 16.4834 5.27498 16.3084 5.06665L15.675 5.70832Z"
                               fill="#8482A8"/>
@@ -91,14 +86,15 @@
                     </svg>
                     <span class="menu-item">Tin rao bán</span>
                 </div>
-                <div class="list buyer-requests-manage">
+                <div class="menu-list buyer-requests-manage">
                     <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/7d3d8f63a68b3f198dbf51bdd0a3167cdcb69651c24bf7ba69da46b4d47f3811?apiKey=920882dcfad3481c92479faa3271aff5&"
                          alt="Buyer requests icon" class="icon"/>
                     <span class="menu-item">Tin tìm mua</span>
                 </div>
-                <div class="list customers" style="justify-content: space-between">
+                <div class="menu-list customers" style="justify-content: space-between">
                     <div style="display: flex; align-items: center; gap: 12px">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21" fill="none">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21"
+                             fill="none">
                             <path d="M14.6084 6.97508C14.55 6.96675 14.4917 6.96675 14.4334 6.97508C13.1417 6.93341 12.1167 5.87508 12.1167 4.57508C12.1167 3.25008 13.1917 2.16675 14.525 2.16675C15.85 2.16675 16.9334 3.24175 16.9334 4.57508C16.925 5.87508 15.9 6.93341 14.6084 6.97508Z"
                                   fill="#8482A8"/>
                             <path d="M17.3252 12.7498C16.3918 13.3748 15.0835 13.6082 13.8752 13.4498C14.1918 12.7665 14.3585 12.0082 14.3668 11.2082C14.3668 10.3748 14.1835 9.58318 13.8335 8.89151C15.0668 8.72485 16.3752 8.95818 17.3168 9.58318C18.6335 10.4498 18.6335 11.8748 17.3252 12.7498Z"
@@ -119,7 +115,7 @@
                               stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>
                 </div>
-                <div class="list property-profiles">
+                <div class="menu-list property-profiles">
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21" fill="none">
                         <path d="M8.33325 13.4167C7.99159 13.4167 7.70825 13.7001 7.70825 14.0417V15.2917C7.70825 15.6334 7.99159 15.9167 8.33325 15.9167C8.67492 15.9167 8.95825 15.6334 8.95825 15.2917V14.0417C8.95825 13.7001 8.67492 13.4167 8.33325 13.4167Z"
                               fill="#8482A8"/>
@@ -129,33 +125,30 @@
                     <span class="menu-item">Hồ sơ nhà</span>
                 </div>
             </div>
-        </section>
-
-        <div class="divider" aria-hidden="true"></div>
-
-        <section class="services-section">
-            <h3 class="section-title">DỊCH VỤ</h3>
-            <div class="list consignment">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21" fill="none">
-                    <g opacity="0.5" clip-path="url(#clip0_6180_49830)">
-                        <path fill-rule="evenodd" clip-rule="evenodd"
-                              d="M3.51847 10.5001H1.66675L10.0001 2.16675L18.3334 10.5001H16.4816H16.4814V16.9815C16.4814 17.4726 16.2863 17.9436 15.939 18.2909C15.5918 18.6382 15.1207 18.8333 14.6296 18.8333H5.37033C4.87918 18.8333 4.40816 18.6382 4.06087 18.2909C3.71358 17.9436 3.51847 17.4726 3.51847 16.9815V10.5001Z"
-                              fill="#100A55"/>
-                        <path d="M3.51847 10.5001H4.35181C4.35181 10.0398 3.97871 9.66675 3.51847 9.66675V10.5001ZM1.66675 10.5001L1.07749 9.91083C0.839161 10.1492 0.767864 10.5076 0.896848 10.819C1.02583 11.1304 1.3297 11.3334 1.66675 11.3334L1.66675 10.5001ZM10.0001 2.16675L10.5893 1.57749C10.2639 1.25206 9.73626 1.25206 9.41083 1.57749L10.0001 2.16675ZM18.3334 10.5001V11.3334C18.6705 11.3334 18.9743 11.1304 19.1033 10.819C19.2323 10.5076 19.161 10.1492 18.9227 9.91083L18.3334 10.5001ZM16.4814 10.5001V9.66675C16.0212 9.66675 15.6481 10.0398 15.6481 10.5001H16.4814ZM4.06087 18.2909L4.65012 17.7017L4.65012 17.7017L4.06087 18.2909ZM3.51847 9.66675H1.66675V11.3334H3.51847V9.66675ZM2.256 11.0893L10.5893 2.756L9.41083 1.57749L1.07749 9.91083L2.256 11.0893ZM9.41083 2.756L17.7442 11.0893L18.9227 9.91083L10.5893 1.57749L9.41083 2.756ZM18.3334 9.66675H16.4816V11.3334H18.3334V9.66675ZM16.4816 9.66675H16.4814V11.3334H16.4816V9.66675ZM17.3148 16.9815V10.5001H15.6481V16.9815H17.3148ZM16.5283 18.8802C17.0319 18.3766 17.3148 17.6936 17.3148 16.9815H15.6481C15.6481 17.2516 15.5408 17.5107 15.3498 17.7017L16.5283 18.8802ZM14.6296 19.6667C15.3417 19.6667 16.0247 19.3838 16.5283 18.8802L15.3498 17.7017C15.1588 17.8927 14.8997 18 14.6296 18V19.6667ZM5.37033 19.6667H14.6296V18H5.37033V19.6667ZM3.47161 18.8802C3.97518 19.3838 4.65817 19.6667 5.37033 19.6667V18C5.1002 18 4.84113 17.8927 4.65012 17.7017L3.47161 18.8802ZM2.68514 16.9815C2.68514 17.6936 2.96804 18.3766 3.47161 18.8802L4.65012 17.7017C4.45911 17.5107 4.35181 17.2516 4.35181 16.9815H2.68514ZM2.68514 10.5001V16.9815H4.35181V10.5001H2.68514Z"
-                              fill="#100A55"/>
-                        <path d="M7.5 11.7499L9.16667 13.4166L12.5 10.0833" stroke="white" stroke-width="1.66667"
-                              stroke-linecap="round" stroke-linejoin="round"/>
-                    </g>
-                    <defs>
-                        <clipPath id="clip0_6180_49830">
-                            <rect width="20" height="20" fill="white" transform="translate(0 0.5)"/>
-                        </clipPath>
-                    </defs>
-                </svg>
-                <span class="menu-item">Ký gửi nhà</span>
+            <div class="divider" aria-hidden="true"></div>
+            <div class="services-section">
+                <h3 class="section-title">DỊCH VỤ</h3>
+                <div class="menu-list consignment">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21" fill="none">
+                        <g opacity="0.5" clip-path="url(#clip0_6180_49830)">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                  d="M3.51847 10.5001H1.66675L10.0001 2.16675L18.3334 10.5001H16.4816H16.4814V16.9815C16.4814 17.4726 16.2863 17.9436 15.939 18.2909C15.5918 18.6382 15.1207 18.8333 14.6296 18.8333H5.37033C4.87918 18.8333 4.40816 18.6382 4.06087 18.2909C3.71358 17.9436 3.51847 17.4726 3.51847 16.9815V10.5001Z"
+                                  fill="#100A55"/>
+                            <path d="M3.51847 10.5001H4.35181C4.35181 10.0398 3.97871 9.66675 3.51847 9.66675V10.5001ZM1.66675 10.5001L1.07749 9.91083C0.839161 10.1492 0.767864 10.5076 0.896848 10.819C1.02583 11.1304 1.3297 11.3334 1.66675 11.3334L1.66675 10.5001ZM10.0001 2.16675L10.5893 1.57749C10.2639 1.25206 9.73626 1.25206 9.41083 1.57749L10.0001 2.16675ZM18.3334 10.5001V11.3334C18.6705 11.3334 18.9743 11.1304 19.1033 10.819C19.2323 10.5076 19.161 10.1492 18.9227 9.91083L18.3334 10.5001ZM16.4814 10.5001V9.66675C16.0212 9.66675 15.6481 10.0398 15.6481 10.5001H16.4814ZM4.06087 18.2909L4.65012 17.7017L4.65012 17.7017L4.06087 18.2909ZM3.51847 9.66675H1.66675V11.3334H3.51847V9.66675ZM2.256 11.0893L10.5893 2.756L9.41083 1.57749L1.07749 9.91083L2.256 11.0893ZM9.41083 2.756L17.7442 11.0893L18.9227 9.91083L10.5893 1.57749L9.41083 2.756ZM18.3334 9.66675H16.4816V11.3334H18.3334V9.66675ZM16.4816 9.66675H16.4814V11.3334H16.4816V9.66675ZM17.3148 16.9815V10.5001H15.6481V16.9815H17.3148ZM16.5283 18.8802C17.0319 18.3766 17.3148 17.6936 17.3148 16.9815H15.6481C15.6481 17.2516 15.5408 17.5107 15.3498 17.7017L16.5283 18.8802ZM14.6296 19.6667C15.3417 19.6667 16.0247 19.3838 16.5283 18.8802L15.3498 17.7017C15.1588 17.8927 14.8997 18 14.6296 18V19.6667ZM5.37033 19.6667H14.6296V18H5.37033V19.6667ZM3.47161 18.8802C3.97518 19.3838 4.65817 19.6667 5.37033 19.6667V18C5.1002 18 4.84113 17.8927 4.65012 17.7017L3.47161 18.8802ZM2.68514 16.9815C2.68514 17.6936 2.96804 18.3766 3.47161 18.8802L4.65012 17.7017C4.45911 17.5107 4.35181 17.2516 4.35181 16.9815H2.68514ZM2.68514 10.5001V16.9815H4.35181V10.5001H2.68514Z"
+                                  fill="#100A55"/>
+                            <path d="M7.5 11.7499L9.16667 13.4166L12.5 10.0833" stroke="white" stroke-width="1.66667"
+                                  stroke-linecap="round" stroke-linejoin="round"/>
+                        </g>
+                        <defs>
+                            <clipPath id="clip0_6180_49830">
+                                <rect width="20" height="20" fill="white" transform="translate(0 0.5)"/>
+                            </clipPath>
+                        </defs>
+                    </svg>
+                    <span class="menu-item">Ký gửi nhà</span>
+                </div>
             </div>
-        </section>
-
+        </div>
         <footer class="footer">
             <div class="help">
                 <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/2b6964813dcc45ba2d30cff8909904188759be8208280b8cec81f8ae8ace7b90?apiKey=920882dcfad3481c92479faa3271aff5&"
@@ -168,529 +161,545 @@
                 <span class="menu-item">Cài đặt tài khoản</span>
             </div>
         </footer>
-    </aside>
+    </div>
     <div class="house-suggestion-section">
-        <section class="suggested-homes-container">
-            <h2 class="suggested-homes-title">Kho nhà gợi ý</h2>
-            <div class="search-container">
-                <div class="search-input-container">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
-                        <g clip-path="url(#clip0_6126_65899)">
-                            <path d="M16.5002 16.4999L11.7422 11.7419" stroke="black" stroke-width="2"
-                                  stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M7.5 13.5C10.8137 13.5 13.5 10.8137 13.5 7.5C13.5 4.18629 10.8137 1.5 7.5 1.5C4.18629 1.5 1.5 4.18629 1.5 7.5C1.5 10.8137 4.18629 13.5 7.5 13.5Z"
-                                  stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </g>
-                        <defs>
-                            <clipPath id="clip0_6126_65899">
-                                <rect width="18" height="18" fill="white"/>
-                            </clipPath>
-                        </defs>
-                    </svg>
-                    <input type="text" id="search-input" class="search-input"
-                           placeholder="Tìm kiếm theo khu vực hoặc dự án"/>
+        <div class="house-suggestion-header">
+            <div class="suggested-homes-container">
+                <h2 class="suggested-homes-title">Kho nhà gợi ý</h2>
+                <div class="search-container">
+                    <div class="search-input-container">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                            <g clip-path="url(#clip0_6126_65899)">
+                                <path d="M16.5002 16.4999L11.7422 11.7419" stroke="black" stroke-width="2"
+                                      stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M7.5 13.5C10.8137 13.5 13.5 10.8137 13.5 7.5C13.5 4.18629 10.8137 1.5 7.5 1.5C4.18629 1.5 1.5 4.18629 1.5 7.5C1.5 10.8137 4.18629 13.5 7.5 13.5Z"
+                                      stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_6126_65899">
+                                    <rect width="18" height="18" fill="white"/>
+                                </clipPath>
+                            </defs>
+                        </svg>
+                        <input type="text" id="search-input" class="search-input"
+                               placeholder="Tìm kiếm theo khu vực hoặc dự án"/>
+                    </div>
                 </div>
             </div>
-        </section>
-        <div class="divider" aria-hidden="true"></div>
-        <section class="location-selector">
-            <div class="location-list">
-                <h3 class="location-label">Khu vực của bạn</h3>
-                <div class="location-options">
-                    <span class="location-option selected">Q. Thanh Xuân</span>
-                    <span class="location-option">Q. Cầu Giấy</span>
-                    <span class="location-option">Q. Đống Đa</span>
-                    <span class="location-option">Q. Hà Đông</span>
-                    <span class="location-option">Q. Nam Từ Liêm</span>
-                    <span class="location-option">Q. Bắc Từ Liêm</span>
-                </div>
-            </div>
-            <div class="location-change">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
-                    <path fill-rule="evenodd" clip-rule="evenodd"
-                          d="M4.03994 3.2399C5.0902 2.18964 6.51465 1.59961 7.99994 1.59961C9.48523 1.59961 10.9097 2.18964 11.9599 3.2399C13.0102 4.29015 13.6002 5.71461 13.6002 7.1999C13.6002 8.68518 13.0102 10.1096 11.9599 11.1599L7.99994 15.1199L4.03994 11.1599C3.51987 10.6399 3.10733 10.0225 2.82587 9.34305C2.5444 8.66359 2.39954 7.93535 2.39954 7.1999C2.39954 6.46445 2.5444 5.7362 2.82587 5.05674C3.10733 4.37728 3.51987 3.75991 4.03994 3.2399ZM7.99994 8.7999C8.42429 8.7999 8.83125 8.63132 9.13131 8.33127C9.43137 8.03121 9.59994 7.62424 9.59994 7.1999C9.59994 6.77555 9.43137 6.36858 9.13131 6.06852C8.83125 5.76847 8.42429 5.5999 7.99994 5.5999C7.57559 5.5999 7.16863 5.76847 6.86857 6.06852C6.56851 6.36858 6.39994 6.77555 6.39994 7.1999C6.39994 7.62424 6.56851 8.03121 6.86857 8.33127C7.16863 8.63132 7.57559 8.7999 7.99994 8.7999Z"
-                          fill="#002F7A"/>
-                </svg>
-                <span class="change-text">Thay đổi khu vực hoạt động</span>
-            </div>
-        </section>
-        <section class="price-filter home-filter">
-            <div style="display: flex; gap: 10px">
-                <h2 class="price-filter-title">Giá</h2>
-                <div style="display: flex; flex-direction: column; gap: 25px">
-                    <div class="price-options">
-                        <label class="check-box-container">
-                            <input type="checkbox" name="price" class="priceCheck">
-                            <span class="checkmark"></span>
-                            < 1 tỷ
-                        </label>
-                        <label class="check-box-container">
-                            <input type="checkbox" name="price" class="priceCheck">
-                            <span class="checkmark"></span>
-                            < 1 - 2 tỷ
-                        </label>
-                        <label class="check-box-container">
-                            <input type="checkbox" name="price" class="priceCheck">
-                            <span class="checkmark"></span>
-                            < 2 - 3 tỷ
-                        </label>
-                        <label class="check-box-container">
-                            <input type="checkbox" name="price" class="priceCheck">
-                            <span class="checkmark"></span>
-                            < 3 - 4 tỷ
-                        </label>
-                        <label class="check-box-container">
-                            <input type="checkbox" name="price" class="priceCheck">
-                            <span class="checkmark"></span>
-                            < 4 - 6 tỷ
-                        </label>
-                    </div>
-                    <div class="price-options expand">
-                        <label class="check-box-container">
-                            <input type="checkbox" name="price" class="priceCheck">
-                            <span class="checkmark"></span>
-                            6 - 8 tỷ
-                        </label>
-                        <label class="check-box-container">
-                            <input type="checkbox" name="price" class="priceCheck">
-                            <span class="checkmark"></span>
-                            8 - 10 tỷ
-                        </label>
-                        <label class="check-box-container">
-                            <input type="checkbox" name="price" class="priceCheck">
-                            <span class="checkmark"></span>
-                            10 - 14 tỷ
-                        </label>
-                        <label class="check-box-container">
-                            <input type="checkbox" name="price" class="priceCheck">
-                            <span class="checkmark"></span>
-                            14 - 20 tỷ
-                        </label>
-                        <label class="check-box-container">
-                            <input type="checkbox" name="price" class="priceCheck">
-                            <span class="checkmark"></span>
-                            > 20 tỷ
-                        </label>
-                    </div>
-                    <div class="price-filter-options">
-                        <p class="price-filter-label">hoặc tự chọn</p>
-                        <div class="price-filter-from">
-                            <input class="price-filter-from-label" placeholder="Từ"/>
-                            <p class="price-filter-from-value">tỷ</p>
+            <div class="home-filter-wrapper">
+                <div class="divider" aria-hidden="true"></div>
+                <div class="location-selector">
+                    <div class="location-list">
+                        <h3 class="location-label">Khu vực của bạn</h3>
+                        <div class="location-options">
+                            <a class="location-option selected">Q. Thanh Xuân</a>
+                            <a class="location-option">Q. Cầu Giấy</a>
+                            <a class="location-option">Q. Đống Đa</a>
+                            <a class="location-option">Q. Hà Đông</a>
+                            <a class="location-option">Q. Nam Từ Liêm</a>
+                            <a class="location-option">Q. Bắc Từ Liêm</a>
                         </div>
-                        <p class="price-filter-separator">-</p>
-                        <div class="price-filter-to">
-                            <input class="price-filter-to-label" placeholder="Đến"/>
-                            <p class="price-filter-to-value">tỷ</p>
+                    </div>
+                    <div class="location-change">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                  d="M4.03994 3.2399C5.0902 2.18964 6.51465 1.59961 7.99994 1.59961C9.48523 1.59961 10.9097 2.18964 11.9599 3.2399C13.0102 4.29015 13.6002 5.71461 13.6002 7.1999C13.6002 8.68518 13.0102 10.1096 11.9599 11.1599L7.99994 15.1199L4.03994 11.1599C3.51987 10.6399 3.10733 10.0225 2.82587 9.34305C2.5444 8.66359 2.39954 7.93535 2.39954 7.1999C2.39954 6.46445 2.5444 5.7362 2.82587 5.05674C3.10733 4.37728 3.51987 3.75991 4.03994 3.2399ZM7.99994 8.7999C8.42429 8.7999 8.83125 8.63132 9.13131 8.33127C9.43137 8.03121 9.59994 7.62424 9.59994 7.1999C9.59994 6.77555 9.43137 6.36858 9.13131 6.06852C8.83125 5.76847 8.42429 5.5999 7.99994 5.5999C7.57559 5.5999 7.16863 5.76847 6.86857 6.06852C6.56851 6.36858 6.39994 6.77555 6.39994 7.1999C6.39994 7.62424 6.56851 8.03121 6.86857 8.33127C7.16863 8.63132 7.57559 8.7999 7.99994 8.7999Z"
+                                  fill="#002F7A"/>
+                        </svg>
+                        <span class="change-text">Thay đổi khu vực hoạt động</span>
+                    </div>
+                </div>
+                <div class="price-filter home-filter">
+                    <div class="home-filter-section">
+                        <h2 class="price-filter-title">Giá</h2>
+                        <div class="price-options-wrapper">
+                            <div class="price-options">
+                                <label class="check-box-container">
+                                    <input type="checkbox" name="price" class="priceCheck">
+                                    <span class="checkmark"></span>
+                                    < 1 tỷ
+                                </label>
+                                <label class="check-box-container">
+                                    <input type="checkbox" name="price" class="priceCheck">
+                                    <span class="checkmark"></span>
+                                    < 1 - 2 tỷ
+                                </label>
+                                <label class="check-box-container">
+                                    <input type="checkbox" name="price" class="priceCheck">
+                                    <span class="checkmark"></span>
+                                    < 2 - 3 tỷ
+                                </label>
+                                <label class="check-box-container">
+                                    <input type="checkbox" name="price" class="priceCheck">
+                                    <span class="checkmark"></span>
+                                    < 3 - 4 tỷ
+                                </label>
+                                <label class="check-box-container">
+                                    <input type="checkbox" name="price" class="priceCheck">
+                                    <span class="checkmark"></span>
+                                    < 4 - 6 tỷ
+                                </label>
+                            </div>
+                            <div class="price-options expand">
+                                <label class="check-box-container">
+                                    <input type="checkbox" name="price" class="priceCheck">
+                                    <span class="checkmark"></span>
+                                    6 - 8 tỷ
+                                </label>
+                                <label class="check-box-container">
+                                    <input type="checkbox" name="price" class="priceCheck">
+                                    <span class="checkmark"></span>
+                                    8 - 10 tỷ
+                                </label>
+                                <label class="check-box-container">
+                                    <input type="checkbox" name="price" class="priceCheck">
+                                    <span class="checkmark"></span>
+                                    10 - 14 tỷ
+                                </label>
+                                <label class="check-box-container">
+                                    <input type="checkbox" name="price" class="priceCheck">
+                                    <span class="checkmark"></span>
+                                    14 - 20 tỷ
+                                </label>
+                                <label class="check-box-container">
+                                    <input type="checkbox" name="price" class="priceCheck">
+                                    <span class="checkmark"></span>
+                                    > 20 tỷ
+                                </label>
+                            </div>
+                            <div class="price-filter-options">
+                                <p class="price-filter-label">hoặc tự chọn</p>
+                                <div class="price-filter-from">
+                                    <input class="price-filter-from-label" placeholder="Từ"/>
+                                    <p class="price-filter-from-value">tỷ</p>
+                                </div>
+                                <p class="price-filter-separator">-</p>
+                                <div class="price-filter-to">
+                                    <input class="price-filter-to-label" placeholder="Đến"/>
+                                    <p class="price-filter-to-value">tỷ</p>
+                                </div>
+                                <a class="price-filter-apply">
+                                    <span class="price-filter-apply-text">Áp dụng</span>
+                                </a>
+                                <a class="price-filter-clear">Xoá</a>
+                            </div>
                         </div>
-                        <a class="price-filter-apply">
-                            <span class="price-filter-apply-text">Áp dụng</span>
-                        </a>
-                        <a class="price-filter-clear">Xoá</a>
+                    </div>
+                    <div class="more-options">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                            <g clip-path="url(#clip0_6126_65941)">
+                                <path d="M8 2.66675V13.3334" stroke="#808494" stroke-width="2" stroke-linecap="round"
+                                      stroke-linejoin="round"/>
+                                <path d="M2.66663 8H13.3333" stroke="#808494" stroke-width="2" stroke-linecap="round"
+                                      stroke-linejoin="round"/>
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_6126_65941">
+                                    <rect width="16" height="16" fill="white"/>
+                                </clipPath>
+                            </defs>
+                        </svg>
+                        <span class="more-label">Thêm lựa chọn</span>
                     </div>
                 </div>
-            </div>
-            <div class="more-options">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
-                    <g clip-path="url(#clip0_6126_65941)">
-                        <path d="M8 2.66675V13.3334" stroke="#808494" stroke-width="2" stroke-linecap="round"
-                              stroke-linejoin="round"/>
-                        <path d="M2.66663 8H13.3333" stroke="#808494" stroke-width="2" stroke-linecap="round"
-                              stroke-linejoin="round"/>
-                    </g>
-                    <defs>
-                        <clipPath id="clip0_6126_65941">
-                            <rect width="16" height="16" fill="white"/>
-                        </clipPath>
-                    </defs>
-                </svg>
-                <span class="more-label">Thêm lựa chọn</span>
-            </div>
-        </section>
-        <section class="price-acreage-filter home-filter">
-            <div style="display: flex; gap: 10px">
-                <h2 class="price-filter-title">Giá theo m²</h2>
-                <div style="display: flex; flex-direction: column; gap: 25px">
-                    <div class="price-options">
-                        <label class="check-box-container">
-                            <input type="checkbox" name="price" class="price-acreageCheck">
-                            <span class="checkmark"></span>
-                            < 10tr/m²
-                        </label>
-                        <label class="check-box-container">
-                            <input type="checkbox" name="price" class="price-acreageCheck">
-                            <span class="checkmark"></span>
-                            10 - 15tr/m²
-                        </label>
-                        <label class="check-box-container">
-                            <input type="checkbox" name="price" class="price-acreageCheck">
-                            <span class="checkmark"></span>
-                            < 15 - 25tr/m²
-                        </label>
-                        <label class="check-box-container">
-                            <input type="checkbox" name="price" class="price-acreageCheck">
-                            <span class="checkmark"></span>
-                            < 25 - 35tr/m²
-                        </label>
-                        <label class="check-box-container">
-                            <input type="checkbox" name="price" class="price-acreageCheck">
-                            <span class="checkmark"></span>
-                            < 35 - 45tr/m²
-                        </label>
-                    </div>
-                    <div class="price-options expand">
-                        <label class="check-box-container">
-                            <input type="checkbox" name="price" class="price-acreageCheck">
-                            <span class="checkmark"></span>
-                            45 - 60tr/m²
-                        </label>
-                        <label class="check-box-container">
-                            <input type="checkbox" name="price" class="price-acreageCheck">
-                            <span class="checkmark"></span>
-                            60 - 80tr/m²
-                        </label>
-                        <label class="check-box-container">
-                            <input type="checkbox" name="price" class="price-acreageCheck">
-                            <span class="checkmark"></span>
-                            80 - 100tr/m²
-                        </label>
-                        <label class="check-box-container">
-                            <input type="checkbox" name="price" class="price-acreageCheck">
-                            <span class="checkmark"></span>
-                            100 - 125tr/m²
-                        </label>
-                        <label class="check-box-container">
-                            <input type="checkbox" name="price" class="price-acreageCheck">
-                            <span class="checkmark"></span>
-                            > 125tr/m²
-                        </label>
-                    </div>
-                    <div class="price-filter-options">
-                        <p class="price-filter-label">hoặc tự chọn</p>
-                        <div class="price-filter-from">
-                            <input class="price-filter-from-label" placeholder="Từ"/>
-                            <p class="price-filter-from-value">tỷ</p>
+                <div class="price-acreage-filter home-filter">
+                    <div class="home-filter-section">
+                        <h2 class="price-filter-title">Giá theo m²</h2>
+                        <div class="price-options-wrapper">
+                            <div class="price-options">
+                                <label class="check-box-container">
+                                    <input type="checkbox" name="price" class="price-acreageCheck">
+                                    <span class="checkmark"></span>
+                                    < 10tr/m²
+                                </label>
+                                <label class="check-box-container">
+                                    <input type="checkbox" name="price" class="price-acreageCheck">
+                                    <span class="checkmark"></span>
+                                    10 - 15tr/m²
+                                </label>
+                                <label class="check-box-container">
+                                    <input type="checkbox" name="price" class="price-acreageCheck">
+                                    <span class="checkmark"></span>
+                                    < 15 - 25tr/m²
+                                </label>
+                                <label class="check-box-container">
+                                    <input type="checkbox" name="price" class="price-acreageCheck">
+                                    <span class="checkmark"></span>
+                                    < 25 - 35tr/m²
+                                </label>
+                                <label class="check-box-container">
+                                    <input type="checkbox" name="price" class="price-acreageCheck">
+                                    <span class="checkmark"></span>
+                                    < 35 - 45tr/m²
+                                </label>
+                            </div>
+                            <div class="price-options expand">
+                                <label class="check-box-container">
+                                    <input type="checkbox" name="price" class="price-acreageCheck">
+                                    <span class="checkmark"></span>
+                                    45 - 60tr/m²
+                                </label>
+                                <label class="check-box-container">
+                                    <input type="checkbox" name="price" class="price-acreageCheck">
+                                    <span class="checkmark"></span>
+                                    60 - 80tr/m²
+                                </label>
+                                <label class="check-box-container">
+                                    <input type="checkbox" name="price" class="price-acreageCheck">
+                                    <span class="checkmark"></span>
+                                    80 - 100tr/m²
+                                </label>
+                                <label class="check-box-container">
+                                    <input type="checkbox" name="price" class="price-acreageCheck">
+                                    <span class="checkmark"></span>
+                                    100 - 125tr/m²
+                                </label>
+                                <label class="check-box-container">
+                                    <input type="checkbox" name="price" class="price-acreageCheck">
+                                    <span class="checkmark"></span>
+                                    > 125tr/m²
+                                </label>
+                            </div>
+                            <div class="price-filter-options">
+                                <p class="price-filter-label">hoặc tự chọn</p>
+                                <div class="price-filter-from">
+                                    <input class="price-filter-from-label" placeholder="Từ"/>
+                                    <p class="price-filter-from-value">tỷ</p>
+                                </div>
+                                <p class="price-filter-separator">-</p>
+                                <div class="price-filter-to">
+                                    <input class="price-filter-to-label" placeholder="Đến"/>
+                                    <p class="price-filter-to-value">tỷ</p>
+                                </div>
+                                <a class="price-filter-apply">
+                                    <span class="price-filter-apply-text">Áp dụng</span>
+                                </a>
+                                <a class="price-filter-clear">Xoá</a>
+                            </div>
                         </div>
-                        <p class="price-filter-separator">-</p>
-                        <div class="price-filter-to">
-                            <input class="price-filter-to-label" placeholder="Đến"/>
-                            <p class="price-filter-to-value">tỷ</p>
+                    </div>
+                    <div class="more-options">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                            <g clip-path="url(#clip0_6126_65941)">
+                                <path d="M8 2.66675V13.3334" stroke="#808494" stroke-width="2" stroke-linecap="round"
+                                      stroke-linejoin="round"/>
+                                <path d="M2.66663 8H13.3333" stroke="#808494" stroke-width="2" stroke-linecap="round"
+                                      stroke-linejoin="round"/>
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_6126_65941">
+                                    <rect width="16" height="16" fill="white"/>
+                                </clipPath>
+                            </defs>
+                        </svg>
+                        <span class="more-label">Thêm lựa chọn</span>
+                    </div>
+                </div>
+                <div class="acreage-filter home-filter">
+                    <div class="home-filter-section">
+                        <h2 class="price-filter-title">Diện tích</h2>
+                        <div class="price-options-wrapper">
+                            <div class="price-options">
+                                <label class="check-box-container">
+                                    <input type="checkbox" name="price" class="acreageCheck">
+                                    <span class="checkmark"></span>
+                                    < 30m²
+                                </label>
+                                <label class="check-box-container">
+                                    <input type="checkbox" name="price" class="acreageCheck">
+                                    <span class="checkmark"></span>
+                                    < 30 - 45m²
+                                </label>
+                                <label class="check-box-container">
+                                    <input type="checkbox" name="price" class="acreageCheck">
+                                    <span class="checkmark"></span>
+                                    < 45 - 60m²
+                                </label>
+                                <label class="check-box-container">
+                                    <input type="checkbox" name="price" class="acreageCheck">
+                                    <span class="checkmark"></span>
+                                    < 60 - 80m²
+                                </label>
+                                <label class="check-box-container">
+                                    <input type="checkbox" name="price" class="acreageCheck">
+                                    <span class="checkmark"></span>
+                                    < 80 - 100m²
+                                </label>
+                            </div>
+                            <div class="price-options expand">
+                                <label class="check-box-container">
+                                    <input type="checkbox" name="price" class="acreageCheck">
+                                    <span class="checkmark"></span>
+                                    100 - 130m²
+                                </label>
+                                <label class="check-box-container">
+                                    <input type="checkbox" name="price" class="acreageCheck">
+                                    <span class="checkmark"></span>
+                                    130 - 170m²
+                                </label>
+                                <label class="check-box-container">
+                                    <input type="checkbox" name="price" class="acreageCheck">
+                                    <span class="checkmark"></span>
+                                    170 -210m²
+                                </label>
+                                <label class="check-box-container">
+                                    <input type="checkbox" name="price" class="acreageCheck">
+                                    <span class="checkmark"></span>
+                                    210 - 250m²
+                                </label>
+                                <label class="check-box-container">
+                                    <input type="checkbox" name="price" class="acreageCheck">
+                                    <span class="checkmark"></span>
+                                    > 250m²
+                                </label>
+                            </div>
+                            <div class="price-filter-options">
+                                <p class="price-filter-label">hoặc tự chọn</p>
+                                <div class="price-filter-from">
+                                    <input class="price-filter-from-label" placeholder="Từ"/>
+                                    <p class="price-filter-from-value">tỷ</p>
+                                </div>
+                                <p class="price-filter-separator">-</p>
+                                <div class="price-filter-to">
+                                    <input class="price-filter-to-label" placeholder="Đến"/>
+                                    <p class="price-filter-to-value">tỷ</p>
+                                </div>
+                                <a class="price-filter-apply">
+                                    <span class="price-filter-apply-text">Áp dụng</span>
+                                </a>
+                                <a class="price-filter-clear">Xoá</a>
+                            </div>
                         </div>
-                        <a class="price-filter-apply">
-                            <span class="price-filter-apply-text">Áp dụng</span>
-                        </a>
-                        <a class="price-filter-clear">Xoá</a>
+                    </div>
+                    <div class="more-options">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                            <g clip-path="url(#clip0_6126_65941)">
+                                <path d="M8 2.66675V13.3334" stroke="#808494" stroke-width="2" stroke-linecap="round"
+                                      stroke-linejoin="round"/>
+                                <path d="M2.66663 8H13.3333" stroke="#808494" stroke-width="2" stroke-linecap="round"
+                                      stroke-linejoin="round"/>
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_6126_65941">
+                                    <rect width="16" height="16" fill="white"/>
+                                </clipPath>
+                            </defs>
+                        </svg>
+                        <span class="more-label">Thêm lựa chọn</span>
                     </div>
                 </div>
-            </div>
-            <div class="more-options">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
-                    <g clip-path="url(#clip0_6126_65941)">
-                        <path d="M8 2.66675V13.3334" stroke="#808494" stroke-width="2" stroke-linecap="round"
-                              stroke-linejoin="round"/>
-                        <path d="M2.66663 8H13.3333" stroke="#808494" stroke-width="2" stroke-linecap="round"
-                              stroke-linejoin="round"/>
-                    </g>
-                    <defs>
-                        <clipPath id="clip0_6126_65941">
-                            <rect width="16" height="16" fill="white"/>
-                        </clipPath>
-                    </defs>
-                </svg>
-                <span class="more-label">Thêm lựa chọn</span>
-            </div>
-        </section>
-        <section class="acreage-filter home-filter">
-            <div style="display: flex; gap: 10px">
-                <h2 class="price-filter-title">Diện tích</h2>
-                <div style="display: flex; flex-direction: column; gap: 25px">
-                    <div class="price-options">
-                        <label class="check-box-container">
-                            <input type="checkbox" name="price" class="acreageCheck">
-                            <span class="checkmark"></span>
-                            < 30m²
-                        </label>
-                        <label class="check-box-container">
-                            <input type="checkbox" name="price" class="acreageCheck">
-                            <span class="checkmark"></span>
-                            < 30 - 45m²
-                        </label>
-                        <label class="check-box-container">
-                            <input type="checkbox" name="price" class="acreageCheck" checked>
-                            <span class="checkmark"></span>
-                            < 45 - 60m²
-                        </label>
-                        <label class="check-box-container">
-                            <input type="checkbox" name="price" class="acreageCheck">
-                            <span class="checkmark"></span>
-                            < 60 - 80m²
-                        </label>
-                        <label class="check-box-container">
-                            <input type="checkbox" name="price" class="acreageCheck">
-                            <span class="checkmark"></span>
-                            < 80 - 100m²
-                        </label>
-                    </div>
-                    <div class="price-options expand">
-                        <label class="check-box-container">
-                            <input type="checkbox" name="price" class="acreageCheck">
-                            <span class="checkmark"></span>
-                            100 - 130m²
-                        </label>
-                        <label class="check-box-container">
-                            <input type="checkbox" name="price" class="acreageCheck">
-                            <span class="checkmark"></span>
-                            130 - 170m²
-                        </label>
-                        <label class="check-box-container">
-                            <input type="checkbox" name="price" class="acreageCheck">
-                            <span class="checkmark"></span>
-                            170 -210m²
-                        </label>
-                        <label class="check-box-container">
-                            <input type="checkbox" name="price" class="acreageCheck">
-                            <span class="checkmark"></span>
-                            210 - 250m²
-                        </label>
-                        <label class="check-box-container">
-                            <input type="checkbox" name="price" class="acreageCheck">
-                            <span class="checkmark"></span>
-                            > 250m²
-                        </label>
-                    </div>
-                    <div class="price-filter-options">
-                        <p class="price-filter-label">hoặc tự chọn</p>
-                        <div class="price-filter-from">
-                            <input class="price-filter-from-label" placeholder="Từ"/>
-                            <p class="price-filter-from-value">tỷ</p>
+                <div class="home-type-filter home-filter type">
+                    <div class="home-filter-section">
+                        <h2 class="price-filter-title">Loại BĐS</h2>
+                        <div class="price-options-wrapper">
+                            <div class="price-options">
+                                <label class="check-box-container">
+                                    <input type="checkbox" name="price" class="home-typeCheck">
+                                    <span class="checkmark"></span>
+                                    Căn hộ
+                                </label>
+                                <label class="check-box-container">
+                                    <input type="checkbox" name="price" class="home-typeCheck">
+                                    <span class="checkmark"></span>
+                                    Nhà đất
+                                </label>
+                                <label class="check-box-container">
+                                    <input type="checkbox" name="price" class="home-typeCheck">
+                                    <span class="checkmark"></span>
+                                    Nhà liền kề
+                                </label>
+                                <label class="check-box-container">
+                                    <input type="checkbox" name="price" class="home-typeCheck">
+                                    <span class="checkmark"></span>
+                                    Nhà biệt thự
+                                </label>
+                                <label class="check-box-container">
+                                    <input type="checkbox" name="price" class="home-typeCheck">
+                                    <span class="checkmark"></span>
+                                    Đất nền
+                                </label>
+                            </div>
                         </div>
-                        <p class="price-filter-separator">-</p>
-                        <div class="price-filter-to">
-                            <input class="price-filter-to-label" placeholder="Đến"/>
-                            <p class="price-filter-to-value">tỷ</p>
-                        </div>
-                        <a class="price-filter-apply">
-                            <span class="price-filter-apply-text">Áp dụng</span>
-                        </a>
-                        <a class="price-filter-clear">Xoá</a>
                     </div>
                 </div>
-            </div>
-            <div class="more-options">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
-                    <g clip-path="url(#clip0_6126_65941)">
-                        <path d="M8 2.66675V13.3334" stroke="#808494" stroke-width="2" stroke-linecap="round"
-                              stroke-linejoin="round"/>
-                        <path d="M2.66663 8H13.3333" stroke="#808494" stroke-width="2" stroke-linecap="round"
-                              stroke-linejoin="round"/>
-                    </g>
-                    <defs>
-                        <clipPath id="clip0_6126_65941">
-                            <rect width="16" height="16" fill="white"/>
-                        </clipPath>
-                    </defs>
-                </svg>
-                <span class="more-label">Thêm lựa chọn</span>
-            </div>
-        </section>
-        <section class="home-type-filter home-filter type">
-            <div style="display: flex; gap: 10px">
-                <h2 class="price-filter-title">Loại BĐS</h2>
-                <div class="price-options">
-                    <label class="check-box-container">
-                        <input type="checkbox" name="price" class="home-typeCheck">
-                        <span class="checkmark"></span>
-                        Căn hộ
-                    </label>
-                    <label class="check-box-container">
-                        <input type="checkbox" name="price" class="home-typeCheck">
-                        <span class="checkmark"></span>
-                        Nhà đất
-                    </label>
-                    <label class="check-box-container">
-                        <input type="checkbox" name="price" class="home-typeCheck">
-                        <span class="checkmark"></span>
-                        Nhà liền kề
-                    </label>
-                    <label class="check-box-container">
-                        <input type="checkbox" name="price" class="home-typeCheck">
-                        <span class="checkmark"></span>
-                        Nhà biệt thự
-                    </label>
-                    <label class="check-box-container">
-                        <input type="checkbox" name="price" class="home-typeCheck">
-                        <span class="checkmark"></span>
-                        Đất nền
-                    </label>
+                <div class="home-type-filter home-filter bedRoom">
+                    <div class="home-filter-section">
+                        <h2 class="price-filter-title">Phòng ngủ</h2>
+                        <div class="price-options-wrapper">
+                            <div class="price-options">
+                                <label class="check-box-container">
+                                    <input type="checkbox" name="price" class="home-bedRoom-typeCheck">
+                                    <span class="checkmark"></span>
+                                    1 PN
+                                </label>
+                                <label class="check-box-container">
+                                    <input type="checkbox" name="price" class="home-bedRoom-typeCheck">
+                                    <span class="checkmark"></span>
+                                    2 PN
+                                </label>
+                                <label class="check-box-container">
+                                    <input type="checkbox" name="price" class="home-bedRoom-typeCheck">
+                                    <span class="checkmark"></span>
+                                    3 PN
+                                </label>
+                                <label class="check-box-container">
+                                    <input type="checkbox" name="price" class="home-bedRoom-typeCheck">
+                                    <span class="checkmark"></span>
+                                    4 PN
+                                </label>
+                                <label class="check-box-container">
+                                    <input type="checkbox" name="price" class="home-bedRoom-typeCheck">
+                                    <span class="checkmark"></span>
+                                    Tất cả
+                                </label>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </section>
-        <section class="home-type-filter home-filter bedRoom">
-            <div style="display: flex; gap: 10px">
-                <h2 class="price-filter-title">Phòng ngủ</h2>
-                <div class="price-options">
-                    <label class="check-box-container">
-                        <input type="checkbox" name="price" class="home-bedRoom-typeCheck">
-                        <span class="checkmark"></span>
-                        1 PN
-                    </label>
-                    <label class="check-box-container">
-                        <input type="checkbox" name="price" class="home-bedRoom-typeCheck">
-                        <span class="checkmark"></span>
-                        2 PN
-                    </label>
-                    <label class="check-box-container">
-                        <input type="checkbox" name="price" class="home-bedRoom-typeCheck">
-                        <span class="checkmark"></span>
-                        3 PN
-                    </label>
-                    <label class="check-box-container">
-                        <input type="checkbox" name="price" class="home-bedRoom-typeCheck">
-                        <span class="checkmark"></span>
-                        4 PN
-                    </label>
-                    <label class="check-box-container">
-                        <input type="checkbox" name="price" class="home-bedRoom-typeCheck">
-                        <span class="checkmark"></span>
-                        Tất cả
-                    </label>
+                <div class="home-type-filter home-filter WC">
+                    <div class="home-filter-section">
+                        <h2 class="price-filter-title">WC</h2>
+                        <div class="price-options-wrapper">
+                            <div class="price-options">
+                                <label class="check-box-container">
+                                    <input type="checkbox" name="price" class="home-WC-typeCheck">
+                                    <span class="checkmark"></span>
+                                    1 WC
+                                </label>
+                                <label class="check-box-container">
+                                    <input type="checkbox" name="price" class="home-WC-typeCheck">
+                                    <span class="checkmark"></span>
+                                    2 WC
+                                </label>
+                                <label class="check-box-container">
+                                    <input type="checkbox" name="price" class="home-WC-typeCheck">
+                                    <span class="checkmark"></span>
+                                    3 WC
+                                </label>
+                                <label class="check-box-container">
+                                    <input type="checkbox" name="price" class="home-WC-typeCheck">
+                                    <span class="checkmark"></span>
+                                    4 WC
+                                </label>
+                                <label class="check-box-container">
+                                    <input type="checkbox" name="price" class="home-WC-typeCheck">
+                                    <span class="checkmark"></span>
+                                    Tất cả
+                                </label>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </section>
-        <section class="home-type-filter home-filter WC">
-            <div style="display: flex; gap: 10px">
-                <h2 class="price-filter-title">WC</h2>
-                <div class="price-options">
-                    <label class="check-box-container">
-                        <input type="checkbox" name="price" class="home-WC-typeCheck">
-                        <span class="checkmark"></span>
-                        1 WC
-                    </label>
-                    <label class="check-box-container">
-                        <input type="checkbox" name="price" class="home-WC-typeCheck">
-                        <span class="checkmark"></span>
-                        2 WC
-                    </label>
-                    <label class="check-box-container">
-                        <input type="checkbox" name="price" class="home-WC-typeCheck">
-                        <span class="checkmark"></span>
-                        3 WC
-                    </label>
-                    <label class="check-box-container">
-                        <input type="checkbox" name="price" class="home-WC-typeCheck">
-                        <span class="checkmark"></span>
-                        4 WC
-                    </label>
-                    <label class="check-box-container">
-                        <input type="checkbox" name="price" class="home-WC-typeCheck">
-                        <span class="checkmark"></span>
-                        Tất cả
-                    </label>
+                <div class="home-type-filter home-filter sample">
+                    <div class="home-filter-section">
+                        <h2 class="price-filter-title">Loại nhà</h2>
+                        <div class="price-options-wrapper">
+                            <div class="price-options">
+                                <label class="check-box-container">
+                                    <input type="checkbox" name="price" class="home-sample-typeCheck">
+                                    <span class="checkmark"></span>
+                                    Liền kề
+                                </label>
+                                <label class="check-box-container">
+                                    <input type="checkbox" name="price" class="home-sample-typeCheck">
+                                    <span class="checkmark"></span>
+                                    Biệt thự
+                                </label>
+                                <label class="check-box-container">
+                                    <input type="checkbox" name="price" class="home-sample-typeCheck">
+                                    <span class="checkmark"></span>
+                                    Shop house
+                                </label>
+                                <label class="check-box-container">
+                                    <input type="checkbox" name="price" class="home-sample-typeCheck">
+                                    <span class="checkmark"></span>
+                                    Tất cả
+                                </label>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </section>
-        <section class="home-type-filter home-filter sample">
-            <div style="display: flex; gap: 10px">
-                <h2 class="price-filter-title">Loại nhà</h2>
-                <div class="price-options">
-                    <label class="check-box-container">
-                        <input type="checkbox" name="price" class="home-sample-typeCheck">
-                        <span class="checkmark"></span>
-                        Liền kề
-                    </label>
-                    <label class="check-box-container">
-                        <input type="checkbox" name="price" class="home-sample-typeCheck">
-                        <span class="checkmark"></span>
-                        Biệt thự
-                    </label>
-                    <label class="check-box-container">
-                        <input type="checkbox" name="price" class="home-sample-typeCheck">
-                        <span class="checkmark"></span>
-                        Shop house
-                    </label>
-                    <label class="check-box-container">
-                        <input type="checkbox" name="price" class="home-sample-typeCheck">
-                        <span class="checkmark"></span>
-                        Tất cả
-                    </label>
+                <div class="home-type-filter home-filter location">
+                    <div class="home-filter-section">
+                        <h2 class="price-filter-title">Vị trí</h2>
+                        <div class="price-options-wrapper">
+                            <div class="price-options">
+                                <label class="check-box-container">
+                                    <input type="checkbox" name="price" class="home-location-typeCheck">
+                                    <span class="checkmark"></span>
+                                    Trong ngõ
+                                </label>
+                                <label class="check-box-container">
+                                    <input type="checkbox" name="price" class="home-location-typeCheck">
+                                    <span class="checkmark"></span>
+                                    Mặt phố
+                                </label>
+                                <label class="check-box-container">
+                                    <input type="checkbox" name="price" class="home-location-typeCheck">
+                                    <span class="checkmark"></span>
+                                    Khu đô thị
+                                </label>
+                                <label class="check-box-container">
+                                    <input type="checkbox" name="price" class="home-location-typeCheck">
+                                    <span class="checkmark"></span>
+                                    Tất cả
+                                </label>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </section>
-        <section class="home-type-filter home-filter location">
-            <div style="display: flex; gap: 10px">
-                <h2 class="price-filter-title">Vị trí</h2>
-                <div class="price-options">
-                    <label class="check-box-container">
-                        <input type="checkbox" name="price" class="home-location-typeCheck">
-                        <span class="checkmark"></span>
-                        Trong ngõ
-                    </label>
-                    <label class="check-box-container">
-                        <input type="checkbox" name="price" class="home-location-typeCheck">
-                        <span class="checkmark"></span>
-                        Mặt phố
-                    </label>
-                    <label class="check-box-container">
-                        <input type="checkbox" name="price" class="home-location-typeCheck">
-                        <span class="checkmark"></span>
-                        Khu đô thị
-                    </label>
-                    <label class="check-box-container">
-                        <input type="checkbox" name="price" class="home-location-typeCheck">
-                        <span class="checkmark"></span>
-                        Tất cả
-                    </label>
+                <div class="filter-wrapper">
+                    <div class="filter-buttons">
+                        <div class="filter-text">Mở rộng bộ lọc</div>
+                        <svg class="filter-arrow" xmlns="http://www.w3.org/2000/svg" width="10" height="6"
+                             viewBox="0 0 10 6"
+                             fill="none">
+                            <path d="M1 1L5 5L9 1" stroke="#000929" stroke-width="2" stroke-linecap="round"
+                                  stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <div class="default-reset">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                            <g clip-path="url(#clip0_6126_66016)">
+                                <path d="M1.86657 10.6053C1.83225 10.5248 1.7824 10.4518 1.71987 10.3905C1.65734 10.3292 1.58336 10.2808 1.50214 10.2482C1.42092 10.2155 1.33405 10.1991 1.24651 10.2C1.15896 10.2009 1.07245 10.219 0.991903 10.2533C0.911358 10.2876 0.838363 10.3375 0.777083 10.4C0.715803 10.4625 0.667439 10.5365 0.634753 10.6177C0.602067 10.699 0.585698 10.7858 0.586582 10.8734C0.587465 10.9609 0.605584 11.0474 0.639902 11.128C0.847427 11.6124 1.10198 12.0753 1.3999 12.51C1.49971 12.656 1.65345 12.7564 1.8273 12.7891C2.00114 12.8218 2.18086 12.7841 2.3269 12.6843C2.47295 12.5845 2.57336 12.4308 2.60606 12.2569C2.63875 12.0831 2.60105 11.9034 2.50124 11.7573C2.25233 11.3951 2.03974 11.0092 1.86657 10.6053Z"
+                                      fill="#000929"/>
+                                <path d="M5.85653 14.3106C5.53423 14.2011 5.22067 14.0674 4.91853 13.9106C4.84453 13.874 4.77186 13.834 4.70119 13.792C4.55072 13.716 4.37707 13.6999 4.21518 13.7468C4.05329 13.7938 3.91519 13.9003 3.82867 14.0449C3.74215 14.1896 3.71363 14.3616 3.74885 14.5265C3.78408 14.6913 3.88044 14.8367 4.01853 14.9333C4.11853 14.9926 4.21853 15.048 4.31319 15.0946C4.67119 15.2807 5.04268 15.4396 5.42453 15.57C5.59125 15.6251 5.773 15.6123 5.93031 15.5342C6.08762 15.4562 6.20777 15.3192 6.26467 15.1531C6.32158 14.9869 6.31063 14.8051 6.2342 14.6469C6.15778 14.4888 6.02206 14.3673 5.85653 14.3086V14.3106Z"
+                                      fill="#000929"/>
+                                <path d="M10.1447 14.3087C9.7388 14.4464 9.32068 14.5451 8.89603 14.6034C8.72847 14.626 8.57578 14.7114 8.46885 14.8424C8.36192 14.9734 8.30876 15.1401 8.32011 15.3088C8.33146 15.4775 8.40649 15.6356 8.53 15.751C8.65352 15.8665 8.81629 15.9307 8.98536 15.9307C9.01568 15.9307 9.04597 15.9287 9.07603 15.9247C9.58548 15.8549 10.0871 15.7366 10.574 15.5714C10.7415 15.5144 10.8794 15.3933 10.9576 15.2347C11.0357 15.076 11.0476 14.8928 10.9907 14.7254C10.9338 14.5579 10.8126 14.42 10.654 14.3418C10.4953 14.2637 10.3121 14.2518 10.1447 14.3087Z"
+                                      fill="#000929"/>
+                                <path d="M13.5027 11.7613C13.2479 12.1342 12.956 12.4805 12.6314 12.7946C12.5681 12.8553 12.5174 12.928 12.4822 13.0084C12.447 13.0888 12.428 13.1754 12.4264 13.2631C12.4247 13.3508 12.4404 13.438 12.4725 13.5197C12.5047 13.6014 12.5526 13.6759 12.6136 13.739C12.6746 13.8021 12.7474 13.8525 12.828 13.8874C12.9085 13.9223 12.9951 13.9409 13.0829 13.9422C13.1706 13.9436 13.2578 13.9276 13.3393 13.8951C13.4209 13.8627 13.4952 13.8145 13.5581 13.7533C13.9478 13.3764 14.2983 12.9609 14.6041 12.5133C14.7038 12.3672 14.7414 12.1875 14.7086 12.0137C14.6759 11.84 14.5754 11.6863 14.4294 11.5866C14.2834 11.4869 14.1037 11.4492 13.9299 11.482C13.7561 11.5148 13.6025 11.6152 13.5027 11.7613Z"
+                                      fill="#000929"/>
+                                <path d="M12.34 1.27798C11.0045 0.416041 9.44261 -0.0285614 7.85344 0.000885283C6.26427 0.030332 4.71989 0.532493 3.4173 1.44331L2.36864 0.127313C2.33759 0.0878184 2.29802 0.0558515 2.25288 0.0338018C2.20774 0.0117521 2.15821 0.000190085 2.10797 -2.01522e-05C2.0876 -4.0106e-05 2.06728 0.00196982 2.0473 0.00597985C1.98794 0.0170688 1.93271 0.0440758 1.8875 0.0841159C1.84229 0.124156 1.80881 0.175725 1.79064 0.233313L0.429303 4.48465C0.416164 4.52642 0.411184 4.57033 0.414637 4.61398C0.418331 4.65763 0.430594 4.70013 0.450725 4.73904C0.470855 4.77795 0.498458 4.81251 0.531955 4.84074C0.565451 4.86898 0.604185 4.89033 0.645941 4.90358C0.687697 4.91684 0.731655 4.92173 0.775303 4.91798L5.2233 4.53931C5.28812 4.53324 5.34964 4.50793 5.39997 4.46665C5.46906 4.41203 5.51372 4.3323 5.52422 4.24486C5.53471 4.15742 5.51017 4.06939 5.45597 3.99998L4.25064 2.48798C5.31528 1.76426 6.56669 1.36427 7.85372 1.33631C9.14075 1.30835 10.4083 1.65361 11.5034 2.33041C12.5985 3.00721 13.4742 3.98658 14.0247 5.15024C14.5753 6.3139 14.7772 7.61208 14.606 8.88798C14.5825 9.0632 14.6295 9.24057 14.7368 9.38109C14.8441 9.52162 15.0028 9.61378 15.178 9.63731C15.2076 9.64128 15.2374 9.64328 15.2673 9.64331C15.4286 9.64313 15.5844 9.58446 15.7058 9.47818C15.8271 9.37189 15.9058 9.2252 15.9273 9.06531C16.126 7.56098 15.8945 6.03114 15.2596 4.65295C14.6247 3.27476 13.6124 2.1046 12.34 1.27798Z"
+                                      fill="#000929"/>
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_6126_66016">
+                                    <rect width="16" height="16" fill="white"/>
+                                </clipPath>
+                            </defs>
+                        </svg>
+                        <div class="default-text">Về mặc định</div>
+                    </div>
                 </div>
+                <div class="divider" aria-hidden="true"></div>
             </div>
-        </section>
-        <div class="filter-wrapper">
-            <div class="filter-buttons">
-                <div class="filter-text">Mở rộng bộ lọc</div>
-                <svg class="filter-arrow" xmlns="http://www.w3.org/2000/svg" width="10" height="6" viewBox="0 0 10 6" fill="none">
-                    <path d="M1 1L5 5L9 1" stroke="#000929" stroke-width="2" stroke-linecap="round"
-                          stroke-linejoin="round"/>
-                </svg>
-            </div>
-            <div class="default-reset">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
-                    <g clip-path="url(#clip0_6126_66016)">
-                        <path d="M1.86657 10.6053C1.83225 10.5248 1.7824 10.4518 1.71987 10.3905C1.65734 10.3292 1.58336 10.2808 1.50214 10.2482C1.42092 10.2155 1.33405 10.1991 1.24651 10.2C1.15896 10.2009 1.07245 10.219 0.991903 10.2533C0.911358 10.2876 0.838363 10.3375 0.777083 10.4C0.715803 10.4625 0.667439 10.5365 0.634753 10.6177C0.602067 10.699 0.585698 10.7858 0.586582 10.8734C0.587465 10.9609 0.605584 11.0474 0.639902 11.128C0.847427 11.6124 1.10198 12.0753 1.3999 12.51C1.49971 12.656 1.65345 12.7564 1.8273 12.7891C2.00114 12.8218 2.18086 12.7841 2.3269 12.6843C2.47295 12.5845 2.57336 12.4308 2.60606 12.2569C2.63875 12.0831 2.60105 11.9034 2.50124 11.7573C2.25233 11.3951 2.03974 11.0092 1.86657 10.6053Z"
-                              fill="#000929"/>
-                        <path d="M5.85653 14.3106C5.53423 14.2011 5.22067 14.0674 4.91853 13.9106C4.84453 13.874 4.77186 13.834 4.70119 13.792C4.55072 13.716 4.37707 13.6999 4.21518 13.7468C4.05329 13.7938 3.91519 13.9003 3.82867 14.0449C3.74215 14.1896 3.71363 14.3616 3.74885 14.5265C3.78408 14.6913 3.88044 14.8367 4.01853 14.9333C4.11853 14.9926 4.21853 15.048 4.31319 15.0946C4.67119 15.2807 5.04268 15.4396 5.42453 15.57C5.59125 15.6251 5.773 15.6123 5.93031 15.5342C6.08762 15.4562 6.20777 15.3192 6.26467 15.1531C6.32158 14.9869 6.31063 14.8051 6.2342 14.6469C6.15778 14.4888 6.02206 14.3673 5.85653 14.3086V14.3106Z"
-                              fill="#000929"/>
-                        <path d="M10.1447 14.3087C9.7388 14.4464 9.32068 14.5451 8.89603 14.6034C8.72847 14.626 8.57578 14.7114 8.46885 14.8424C8.36192 14.9734 8.30876 15.1401 8.32011 15.3088C8.33146 15.4775 8.40649 15.6356 8.53 15.751C8.65352 15.8665 8.81629 15.9307 8.98536 15.9307C9.01568 15.9307 9.04597 15.9287 9.07603 15.9247C9.58548 15.8549 10.0871 15.7366 10.574 15.5714C10.7415 15.5144 10.8794 15.3933 10.9576 15.2347C11.0357 15.076 11.0476 14.8928 10.9907 14.7254C10.9338 14.5579 10.8126 14.42 10.654 14.3418C10.4953 14.2637 10.3121 14.2518 10.1447 14.3087Z"
-                              fill="#000929"/>
-                        <path d="M13.5027 11.7613C13.2479 12.1342 12.956 12.4805 12.6314 12.7946C12.5681 12.8553 12.5174 12.928 12.4822 13.0084C12.447 13.0888 12.428 13.1754 12.4264 13.2631C12.4247 13.3508 12.4404 13.438 12.4725 13.5197C12.5047 13.6014 12.5526 13.6759 12.6136 13.739C12.6746 13.8021 12.7474 13.8525 12.828 13.8874C12.9085 13.9223 12.9951 13.9409 13.0829 13.9422C13.1706 13.9436 13.2578 13.9276 13.3393 13.8951C13.4209 13.8627 13.4952 13.8145 13.5581 13.7533C13.9478 13.3764 14.2983 12.9609 14.6041 12.5133C14.7038 12.3672 14.7414 12.1875 14.7086 12.0137C14.6759 11.84 14.5754 11.6863 14.4294 11.5866C14.2834 11.4869 14.1037 11.4492 13.9299 11.482C13.7561 11.5148 13.6025 11.6152 13.5027 11.7613Z"
-                              fill="#000929"/>
-                        <path d="M12.34 1.27798C11.0045 0.416041 9.44261 -0.0285614 7.85344 0.000885283C6.26427 0.030332 4.71989 0.532493 3.4173 1.44331L2.36864 0.127313C2.33759 0.0878184 2.29802 0.0558515 2.25288 0.0338018C2.20774 0.0117521 2.15821 0.000190085 2.10797 -2.01522e-05C2.0876 -4.0106e-05 2.06728 0.00196982 2.0473 0.00597985C1.98794 0.0170688 1.93271 0.0440758 1.8875 0.0841159C1.84229 0.124156 1.80881 0.175725 1.79064 0.233313L0.429303 4.48465C0.416164 4.52642 0.411184 4.57033 0.414637 4.61398C0.418331 4.65763 0.430594 4.70013 0.450725 4.73904C0.470855 4.77795 0.498458 4.81251 0.531955 4.84074C0.565451 4.86898 0.604185 4.89033 0.645941 4.90358C0.687697 4.91684 0.731655 4.92173 0.775303 4.91798L5.2233 4.53931C5.28812 4.53324 5.34964 4.50793 5.39997 4.46665C5.46906 4.41203 5.51372 4.3323 5.52422 4.24486C5.53471 4.15742 5.51017 4.06939 5.45597 3.99998L4.25064 2.48798C5.31528 1.76426 6.56669 1.36427 7.85372 1.33631C9.14075 1.30835 10.4083 1.65361 11.5034 2.33041C12.5985 3.00721 13.4742 3.98658 14.0247 5.15024C14.5753 6.3139 14.7772 7.61208 14.606 8.88798C14.5825 9.0632 14.6295 9.24057 14.7368 9.38109C14.8441 9.52162 15.0028 9.61378 15.178 9.63731C15.2076 9.64128 15.2374 9.64328 15.2673 9.64331C15.4286 9.64313 15.5844 9.58446 15.7058 9.47818C15.8271 9.37189 15.9058 9.2252 15.9273 9.06531C16.126 7.56098 15.8945 6.03114 15.2596 4.65295C14.6247 3.27476 13.6124 2.1046 12.34 1.27798Z"
-                              fill="#000929"/>
-                    </g>
-                    <defs>
-                        <clipPath id="clip0_6126_66016">
-                            <rect width="16" height="16" fill="white"/>
-                        </clipPath>
-                    </defs>
-                </svg>
-                <div class="default-text">Về mặc định</div>
+            <div class="results-sort-container">
+                <p class="results-count">Có <span>253</span> kết quả dành cho bạn</p>
+                <div class="sort-container">
+                    <div class="sort-wrapper">
+                        <input type="text" placeholder="Sắp xếp theo mới nhất" readonly/>
+
+                        <!-- options list -->
+                        <ul class="options">
+                            <li class="option">Sắp xếp theo mới nhất</li>
+                            <li class="option">HTML</li>
+                            <li class="option">CSS</li>
+                            <li class="option">JS</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="divider" aria-hidden="true"></div>
-        <section class="results-sort-container">
-            <p class="results-count">Có <span>253</span> kết quả dành cho bạn</p>
-            <div class="sort-container">
-                <div class="sort-wrapper">
-                    <input type="text" placeholder="Sắp xếp theo mới nhất" readonly/>
-
-                    <!-- options list -->
-                    <ul class="options">
-                        <li class="option">Sắp xếp theo mới nhất</li>
-                        <li class="option">HTML</li>
-                        <li class="option">CSS</li>
-                        <li class="option">JS</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
         <div class="property-card-container">
             <div class="property-card seller">
                 <div class="property-details">
@@ -699,21 +708,17 @@
                              alt="Property Image"/>
                     </div>
                     <div class="property-info">
-                        <a class="property-title">
-                            Nhà mặt ngõ cách Đường Phú Diễn 120m, diện tích 40.5m² x 3 tầng, mặt tiền 3.5m
-                            <br>
-                            <div style=" display: flex;align-items: center;gap: 6px;">
-                                <tag class="sell-tag">Bán Gấp</tag>
-                                <tag class="confirm-tag">Karo đã xác thực</tag>
-                            </div>
-                        </a>
-                        <div class="property-location-price">
+                        <div class="property-info-header">
+                            <a class="property-title">
+                                Nhà mặt ngõ cách Đường Phú Diễn 120m, diện tích 40.5m² x 3 tầng, mặt tiền 3.5m
+                                <span>
+                                <span class="sell-tag">Bán Gấp</span>
+                                <span class="confirm-tag">Karo đã xác thực</span>
+                            </span>
+                            </a>
                             <a class="property-location">
                                 Phường Tân Mai, Quận Hai Bà Trưng, TP Hà Nội
                             </a>
-                            <div class="property-price">4,5 tỷ</div>
-                        </div>
-                        <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 10px">
                             <div class="property-attributes">
                                 <div class="property-type">
                                     <div class="property-type-label">Loại:</div>
@@ -726,7 +731,8 @@
                                 </div>
                             </div>
                             <div class="property-price-per-sqm">
-                                Giá mét vuông: <span>124tr</span>
+                                <div class="property-price">4,5 tỷ</div>
+                                <div class="property-per-sqm">Giá mét vuông: <span>124tr</span></div>
                             </div>
                         </div>
                         <div class="property-separator"></div>
@@ -795,20 +801,16 @@
                              alt="Property Image"/>
                     </div>
                     <div class="property-info">
-                        <a class="property-title">
-                            Nhà mặt ngõ cách Đường Phú Diễn 120m, diện tích 40.5m² x 3 tầng, mặt tiền 3.5m
-                            <br>
-                            <div style=" display: flex;align-items: center;gap: 6px;">
-                                <tag class="confirm-tag">Karo đã xác thực</tag>
-                            </div>
-                        </a>
-                        <div class="property-location-price">
+                        <div class="property-info-header">
+                            <a class="property-title">
+                                Nhà mặt ngõ cách Đường Phú Diễn 120m, diện tích 40.5m² x 3 tầng, mặt tiền 3.5m
+                                <span>
+                                <span class="confirm-tag">Karo đã xác thực</span>
+                            </span>
+                            </a>
                             <a class="property-location">
                                 Phường Tân Mai, Quận Hai Bà Trưng, TP Hà Nội
                             </a>
-                            <div class="property-price">4,5 tỷ</div>
-                        </div>
-                        <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 10px">
                             <div class="property-attributes">
                                 <div class="property-type">
                                     <div class="property-type-label">Loại:</div>
@@ -821,7 +823,8 @@
                                 </div>
                             </div>
                             <div class="property-price-per-sqm">
-                                Giá mét vuông: <span>124tr</span>
+                                <div class="property-price">4,5 tỷ</div>
+                                <div class="property-per-sqm">Giá mét vuông: <span>124tr</span></div>
                             </div>
                         </div>
                         <div class="property-separator"></div>
@@ -886,19 +889,14 @@
             <div class="property-card buyer">
                 <div class="property-details">
                     <div class="property-info">
-                        <a class="property-title">
-                            Cần tìm mua nhà mặt phố khu vực Hai Bà Trưng, ngân sách 5 tỷ quay đầu, ưu tiên giao dịch nhanh gọn
-                            <br>
-                        </a>
-                        <div class="property-location-price">
+                        <div class="property-info-header">
+                            <a class="property-title">
+                                Cần tìm mua nhà mặt phố khu vực Hai Bà Trưng, ngân sách 5 tỷ quay đầu, ưu tiên giao dịch
+                                nhanh gọn
+                            </a>
                             <a class="property-location">
                                 Phường Tân Mai, Quận Hai Bà Trưng, TP Hà Nội
                             </a>
-                            <div class="property-price-per-sqm">
-                                Khoảng giá từ
-                            </div>
-                        </div>
-                        <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 10px">
                             <div class="property-attributes">
                                 <div class="property-type">
                                     <div class="property-type-label">Loại:</div>
@@ -906,11 +904,14 @@
                                 </div>
                                 <div class="property-attributes-separator">/</div>
                                 <div class="property-size">
-                                    <div class="property-size-label">Khoảng diện tích:</div>
-                                    <div class="property-size-value">40 - 55m²</div>
+                                    <div class="property-size-label">Diện tích:</div>
+                                    <div class="property-size-value">40 - 55m²²</div>
                                 </div>
                             </div>
-                            <div class="property-price">4 - 4,5 tỷ</div>
+                            <div class="property-price-per-sqm">
+                                <div class="property-per-sqm">Khoảng giá từ</div>
+                                <div class="property-price">4 - 4,5 tỷ</div>
+                            </div>
                         </div>
                         <div class="property-separator"></div>
                         <div class="property-agent-actions">
@@ -975,15 +976,20 @@
                     <div class="property-info">
                         <a class="karo-ai-recommendation">
                             <div class="karo-ai-recommendation__header">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="17" viewBox="0 0 16 17" fill="none">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="17" viewBox="0 0 16 17"
+                                     fill="none">
                                     <g clip-path="url(#clip0_6180_49353)">
                                         <path d="M2 8.03833H0V9.03833H2V8.03833Z" fill="#FF5358"/>
-                                        <path d="M2.69666 2.52801L1.98956 3.23511L3.40376 4.64931L4.11086 3.94221L2.69666 2.52801Z" fill="#FF5358"/>
+                                        <path d="M2.69666 2.52801L1.98956 3.23511L3.40376 4.64931L4.11086 3.94221L2.69666 2.52801Z"
+                                              fill="#FF5358"/>
                                         <path d="M8.5 0.53833H7.5V2.53833H8.5V0.53833Z" fill="#FF5358"/>
-                                        <path d="M13.3022 2.52794L11.888 3.94214L12.5951 4.64924L14.0093 3.23504L13.3022 2.52794Z" fill="#FF5358"/>
+                                        <path d="M13.3022 2.52794L11.888 3.94214L12.5951 4.64924L14.0093 3.23504L13.3022 2.52794Z"
+                                              fill="#FF5358"/>
                                         <path d="M16 8.03833H14V9.03833H16V8.03833Z" fill="#FF5358"/>
-                                        <path d="M5.5 15.5383V16.0383C5.5 16.3143 5.724 16.5383 6 16.5383H10C10.276 16.5383 10.5 16.3143 10.5 16.0383V15.5383H5.5Z" fill="#FF5358"/>
-                                        <path d="M8 3.53833C5.243 3.53833 3 5.78133 3 8.53833C3 10.3403 3.95 11.9703 5.5 12.8638V14.5383H10.5V12.8638C12.05 11.9703 13 10.3403 13 8.53833C13 5.78133 10.757 3.53833 8 3.53833Z" fill="#FF5358"/>
+                                        <path d="M5.5 15.5383V16.0383C5.5 16.3143 5.724 16.5383 6 16.5383H10C10.276 16.5383 10.5 16.3143 10.5 16.0383V15.5383H5.5Z"
+                                              fill="#FF5358"/>
+                                        <path d="M8 3.53833C5.243 3.53833 3 5.78133 3 8.53833C3 10.3403 3.95 11.9703 5.5 12.8638V14.5383H10.5V12.8638C12.05 11.9703 13 10.3403 13 8.53833C13 5.78133 10.757 3.53833 8 3.53833Z"
+                                              fill="#FF5358"/>
                                     </g>
                                     <defs>
                                         <clipPath id="clip0_6180_49353">
@@ -992,26 +998,25 @@
                                     </defs>
                                 </svg>
                                 <div class="karo-ai-recommendation__title">
-                                    <span style="color: #EC1F25; font-weight: 600">KaroAI:</span> <span class="karo-ai-recommendation__highlight">Nhu cầu này có thể phù hợp với BĐS bạn đang bán</span>
+                                    <span style="color: #EC1F25; font-weight: 600">KaroAI:</span> <span
+                                        class="karo-ai-recommendation__highlight">Nhu cầu này có thể phù hợp với BĐS bạn đang bán</span>
                                 </div>
                             </div>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="7" height="11" viewBox="0 0 7 11" fill="none">
-                                <path d="M1 1.03833L5.5 5.53833L1 10.0383" stroke="#000929" stroke-opacity="0.7" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="7" height="11" viewBox="0 0 7 11"
+                                 fill="none">
+                                <path d="M1 1.03833L5.5 5.53833L1 10.0383" stroke="#000929" stroke-opacity="0.7"
+                                      stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
+                                      stroke-linejoin="round"/>
                             </svg>
                         </a>
-                        <a class="property-title">
-                            Cần tìm mua nhà mặt phố khu vực Hai Bà Trưng, ngân sách 5 tỷ quay đầu, ưu tiên giao dịch nhanh gọn
-                            <br>
-                        </a>
-                        <div class="property-location-price">
+                        <div class="property-info-header">
+                            <a class="property-title">
+                                Cần tìm mua nhà mặt phố khu vực Hai Bà Trưng, ngân sách 5 tỷ quay đầu, ưu tiên giao dịch
+                                nhanh gọn
+                            </a>
                             <a class="property-location">
                                 Phường Tân Mai, Quận Hai Bà Trưng, TP Hà Nội
                             </a>
-                            <div class="property-price-per-sqm">
-                                Khoảng giá từ
-                            </div>
-                        </div>
-                        <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 10px">
                             <div class="property-attributes">
                                 <div class="property-type">
                                     <div class="property-type-label">Loại:</div>
@@ -1019,11 +1024,14 @@
                                 </div>
                                 <div class="property-attributes-separator">/</div>
                                 <div class="property-size">
-                                    <div class="property-size-label">Khoảng diện tích:</div>
-                                    <div class="property-size-value">40 - 55m²</div>
+                                    <div class="property-size-label">Diện tích:</div>
+                                    <div class="property-size-value">40 - 55m²²</div>
                                 </div>
                             </div>
-                            <div class="property-price">4 - 4,5 tỷ</div>
+                            <div class="property-price-per-sqm">
+                                <div class="property-per-sqm">Khoảng giá từ</div>
+                                <div class="property-price">4 - 4,5 tỷ</div>
+                            </div>
                         </div>
                         <div class="property-separator"></div>
                         <div class="property-agent-actions">
@@ -1084,7 +1092,7 @@
                 </div>
             </div>
         </div>
-        <nav class="pagination" aria-label="Pagination">
+        <div class="pagination" aria-label="Pagination">
             <a href="#" class="pagination-item">Trước</a>
             <a href="#" class="pagination-item active" aria-current="page">1</a>
             <a href="#" class="pagination-item">2</a>
@@ -1092,14 +1100,14 @@
             <a href="#" class="pagination-item">4</a>
             <a href="#" class="pagination-item">5</a>
             <a href="#" class="pagination-item">Tiếp</a>
-        </nav>
+        </div>
     </div>
 </div>
 </body>
 
 <script>
     // Get all elements with the class "list"
-    const listElements = document.querySelectorAll('.list');
+    const listElements = document.querySelectorAll('.menu-list');
 
     // Add a click event listener to each element
     listElements.forEach((element) => {
@@ -1130,100 +1138,62 @@
         })
     })
 
-    // Define click event for elements with the class "checkoption"
-    document.querySelectorAll('.priceCheck').forEach(function (checkbox) {
-        checkbox.addEventListener('click', function () {
-            // Uncheck all other checkboxes in the group
-            document.querySelectorAll('.priceCheck').forEach(function (otherCheckbox) {
-                if (otherCheckbox !== checkbox) {
-                    otherCheckbox.checked = false;
-                }
+    function handleCheckboxTextClick(checkboxes) {
+        checkboxes.forEach((checkbox) => {
+            checkbox.addEventListener('click', () => {
+                checkboxes.forEach((otherCheckbox) => {
+                    if (otherCheckbox !== checkbox) {
+                        otherCheckbox.style.color = "rgba(0, 9, 41, 0.70)";
+                    }
+                });
+                checkbox.style.color = "#000929";
             });
         });
-    });
+    }
 
-    document.querySelectorAll('.price-acreageCheck').forEach(function (checkbox) {
-        checkbox.addEventListener('click', function () {
+    const priceCheckBoxText = document.querySelectorAll('.price-filter .check-box-container');
+    handleCheckboxTextClick(priceCheckBoxText);
+    const priceAcreageCheckBoxText = document.querySelectorAll('.price-acreage-filter .check-box-container');
+    handleCheckboxTextClick(priceAcreageCheckBoxText);
+    const acreageCheckBoxText = document.querySelectorAll('.acreage-filter .check-box-container');
+    handleCheckboxTextClick(acreageCheckBoxText)
+    const typeCheckBoxText = document.querySelectorAll('.type .check-box-container');
+    handleCheckboxTextClick(typeCheckBoxText)
+    const bedRoomCheckBoxText = document.querySelectorAll('.bedRoom .check-box-container');
+    handleCheckboxTextClick(bedRoomCheckBoxText)
+    const WCCheckBoxText = document.querySelectorAll('.WC .check-box-container');
+    handleCheckboxTextClick(WCCheckBoxText)
+    const sampleCheckBoxText = document.querySelectorAll('.sample .check-box-container');
+    handleCheckboxTextClick(sampleCheckBoxText)
+    const locationCheckBoxText = document.querySelectorAll('.location .check-box-container');
+    handleCheckboxTextClick(locationCheckBoxText)
 
-            document.querySelectorAll('.price-acreageCheck').forEach(function (otherCheckbox) {
-                if (otherCheckbox !== checkbox) {
-                    otherCheckbox.checked = false;
-                }
+    function handleCheckboxClick(className) {
+        document.querySelectorAll(className).forEach(function (checkbox) {
+            checkbox.addEventListener('click', function () {
+                document.querySelectorAll(className).forEach(function (otherCheckbox) {
+                    if (otherCheckbox !== checkbox) {
+                        otherCheckbox.checked = false;
+                    }
+                });
             });
         });
-    });
+    }
 
-    document.querySelectorAll('.acreageCheck').forEach(function (checkbox) {
-        checkbox.addEventListener('click', function () {
-
-            document.querySelectorAll('.acreageCheck').forEach(function (otherCheckbox) {
-                if (otherCheckbox !== checkbox) {
-                    otherCheckbox.checked = false;
-                }
-            });
-        });
-    });
-
-    document.querySelectorAll('.home-typeCheck').forEach(function (checkbox) {
-        checkbox.addEventListener('click', function () {
-
-            document.querySelectorAll('.home-typeCheck').forEach(function (otherCheckbox) {
-                if (otherCheckbox !== checkbox) {
-                    otherCheckbox.checked = false;
-                }
-            });
-        });
-    });
-
-    document.querySelectorAll('.home-bedRoom-typeCheck').forEach(function (checkbox) {
-        checkbox.addEventListener('click', function () {
-
-            document.querySelectorAll('.home-bedRoom-typeCheck').forEach(function (otherCheckbox) {
-                if (otherCheckbox !== checkbox) {
-                    otherCheckbox.checked = false;
-                }
-            });
-        });
-    });
-
-    document.querySelectorAll('.home-WC-typeCheck').forEach(function (checkbox) {
-        checkbox.addEventListener('click', function () {
-
-            document.querySelectorAll('.home-WC-typeCheck').forEach(function (otherCheckbox) {
-                if (otherCheckbox !== checkbox) {
-                    otherCheckbox.checked = false;
-                }
-            });
-        });
-    });
-
-    document.querySelectorAll('.home-sample-typeCheck').forEach(function (checkbox) {
-        checkbox.addEventListener('click', function () {
-
-            document.querySelectorAll('.home-sample-typeCheck').forEach(function (otherCheckbox) {
-                if (otherCheckbox !== checkbox) {
-                    otherCheckbox.checked = false;
-                }
-            });
-        });
-    });
-
-    document.querySelectorAll('.home-location-typeCheck').forEach(function (checkbox) {
-        checkbox.addEventListener('click', function () {
-
-            document.querySelectorAll('.home-location-typeCheck').forEach(function (otherCheckbox) {
-                if (otherCheckbox !== checkbox) {
-                    otherCheckbox.checked = false;
-                }
-            });
-        });
-    });
+    handleCheckboxClick('.priceCheck');
+    handleCheckboxClick('.price-acreageCheck');
+    handleCheckboxClick('.acreageCheck');
+    handleCheckboxClick('.home-typeCheck');
+    handleCheckboxClick('.home-bedRoom-typeCheck');
+    handleCheckboxClick('.home-WC-typeCheck');
+    handleCheckboxClick('.home-sample-typeCheck');
+    handleCheckboxClick('.home-location-typeCheck');
 
     const priceFilterMoreOptions = document.querySelector('.price-filter .more-options');
     const priceAcreageFilterMoreOptions = document.querySelector('.price-acreage-filter .more-options')
     const acreageFilterMoreOptions = document.querySelector('.acreage-filter .more-options')
 
-    priceFilterMoreOptions.addEventListener('click', function (){
+    priceFilterMoreOptions.addEventListener('click', function () {
         const priceOptionExpand = document.querySelector('.price-filter .price-options.expand')
         const priceFilterOptions = document.querySelector('.price-filter .price-filter-options')
 
@@ -1232,7 +1202,7 @@
         priceFilterMoreOptions.style.display = "none"
     })
 
-    priceAcreageFilterMoreOptions.addEventListener('click', function (){
+    priceAcreageFilterMoreOptions.addEventListener('click', function () {
         const priceOptionExpand = document.querySelector('.price-acreage-filter .price-options.expand')
         const priceFilterOptions = document.querySelector('.price-acreage-filter .price-filter-options')
 
@@ -1241,7 +1211,7 @@
         priceAcreageFilterMoreOptions.style.display = "none"
     })
 
-    acreageFilterMoreOptions.addEventListener('click', function (){
+    acreageFilterMoreOptions.addEventListener('click', function () {
         const priceOptionExpand = document.querySelector('.acreage-filter .price-options.expand')
         const priceFilterOptions = document.querySelector('.acreage-filter .price-filter-options')
 
@@ -1253,7 +1223,7 @@
     const filterButton = document.querySelector('.filter-buttons');
     let isOpened = true
 
-    filterButton.addEventListener('click', function (){
+    filterButton.addEventListener('click', function () {
         const filterText = document.querySelector('.filter-text')
         const filterArrow = document.querySelector('.filter-arrow')
         const homeFilterBedRoom = document.querySelector('.bedRoom')
@@ -1283,7 +1253,7 @@
 
     const defaultResetButton = document.querySelector('.default-reset');
 
-    defaultResetButton.addEventListener('click',function (){
+    defaultResetButton.addEventListener('click', function () {
         const priceOptionExpand = document.querySelectorAll('.price-options.expand')
         const priceFilterOptions = document.querySelectorAll('.price-filter-options')
         const MoreOptions = document.querySelectorAll('.home-filter .more-options')
@@ -1298,7 +1268,7 @@
             option.style.display = "none";
         });
 
-        MoreOptions.forEach(function (option){
+        MoreOptions.forEach(function (option) {
             option.style.display = "flex";
         })
     })

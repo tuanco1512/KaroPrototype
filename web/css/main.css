@@ -25,42 +25,50 @@
 .sidebar .profile:hover {
   cursor: pointer;
 }
-.sidebar .avatar {
+.sidebar .profile .avatar {
   width: 48px;
   aspect-ratio: 1;
   object-fit: cover;
   border-radius: 50%;
 }
-.sidebar .profile-info {
+.sidebar .profile .profile-info {
   display: flex;
   flex-direction: column;
   margin: auto 0;
 }
-.sidebar .profile-name {
+.sidebar .profile .profile-name {
   font: 700 16px/140% "Plus Jakarta Sans", sans-serif;
 }
-.sidebar .profile-role {
+.sidebar .profile .profile-role {
   margin-top: 5px;
   font: 500 12px/135% "Plus Jakarta Sans", sans-serif;
+}
+.sidebar .scroll-box {
+  overflow-y: scroll;
+}
+.sidebar .scroll-box .menu-list:hover {
+  background: var(--BG-Light-w-Blue, #ebf3ff);
+}
+.sidebar .scroll-box .menu-list:hover .menu-item {
+  color: #1d61cc;
+}
+.sidebar .scroll-box .menu-list:hover path {
+  fill: #1d61cc;
+}
+.sidebar .scroll-box::-webkit-scrollbar {
+  background-color: transparent;
+  width: 0;
+}
+.sidebar .scroll-box:hover::-webkit-scrollbar {
+  width: 8px;
+}
+.sidebar .scroll-box:hover::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.2);
 }
 .sidebar .explore-section {
   display: flex;
   margin-top: 24px;
   flex-direction: column;
-}
-.sidebar .explore-section .scroll-box {
-  overflow-y: scroll;
-  height: 150px;
-}
-.sidebar .explore-section .scroll-box::-webkit-scrollbar {
-  background-color: transparent;
-  width: 0;
-}
-.sidebar .explore-section .scroll-box:hover::-webkit-scrollbar {
-  width: 8px;
-}
-.sidebar .explore-section .scroll-box:hover::-webkit-scrollbar-thumb {
-  background-color: rgba(0, 0, 0, 0.2);
 }
 .sidebar .section-title {
   border-radius: 6px;
@@ -69,7 +77,7 @@
   padding: 10px;
   font: 700 11px/150% "Plus Jakarta Sans", sans-serif;
 }
-.sidebar .suggested-homes, .sidebar .buyer-requests, .sidebar .interested-properties, .sidebar .for-sale-properties, .sidebar .buyer-requests-manage, .sidebar .customers, .sidebar .property-profiles, .sidebar .consignment {
+.sidebar .menu-list {
   border-radius: 8px;
   display: flex;
   align-items: center;
@@ -80,7 +88,7 @@
   line-height: 150%;
   padding: 10px;
 }
-.sidebar .suggested-homes:hover, .sidebar .buyer-requests:hover, .sidebar .interested-properties:hover, .sidebar .for-sale-properties:hover, .sidebar .buyer-requests-manage:hover, .sidebar .customers:hover, .sidebar .property-profiles:hover, .sidebar .consignment:hover {
+.sidebar .menu-list:hover {
   cursor: pointer;
 }
 .sidebar .active {
@@ -118,20 +126,6 @@
   color: var(--Main-Color-Secondary, #100a55);
   font-weight: 600;
   line-height: 150%;
-}
-.sidebar .manage-section .scroll-box {
-  overflow-y: scroll;
-  height: 200px;
-}
-.sidebar .manage-section .scroll-box::-webkit-scrollbar {
-  background-color: transparent;
-  width: 0;
-}
-.sidebar .manage-section .scroll-box:hover::-webkit-scrollbar {
-  width: 8px;
-}
-.sidebar .manage-section .scroll-box:hover::-webkit-scrollbar-thumb {
-  background-color: rgba(0, 0, 0, 0.2);
 }
 .sidebar .services-section {
   display: flex;
@@ -173,7 +167,7 @@
   display: flex;
   padding: 40px;
   flex-direction: column;
-  gap: 25px;
+  gap: 30px;
   align-self: stretch;
   width: calc(100% - 298px);
   background: #FFF;
@@ -181,12 +175,17 @@
   right: 0;
   box-sizing: border-box;
 }
-.house-suggestion-section .suggested-homes-container {
+.house-suggestion-section .house-suggestion-header {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+.house-suggestion-section .house-suggestion-header .suggested-homes-container {
   display: flex;
   gap: 20px;
   align-self: stretch;
 }
-.house-suggestion-section .suggested-homes-container .suggested-homes-title {
+.house-suggestion-section .house-suggestion-header .suggested-homes-container .suggested-homes-title {
   color: var(--Main-Color-Black, #000929);
   flex: 1;
   font-size: 24px;
@@ -195,7 +194,7 @@
   line-height: 140%;
   margin: auto 0;
 }
-.house-suggestion-section .suggested-homes-container .search-container {
+.house-suggestion-section .house-suggestion-header .suggested-homes-container .search-container {
   color: var(--Text-Grey, rgba(0, 9, 41, 0.7));
   display: flex;
   flex: 1;
@@ -205,7 +204,7 @@
   justify-content: center;
   line-height: 150%;
 }
-.house-suggestion-section .suggested-homes-container .search-input-container {
+.house-suggestion-section .house-suggestion-header .suggested-homes-container .search-input-container {
   background-color: var(--BG-Light-Blue, #f5f9ff);
   border: 1px solid rgb(230, 240, 255);
   border-radius: 8px;
@@ -214,7 +213,7 @@
   gap: 10px;
   padding: 12px 14px;
 }
-.house-suggestion-section .suggested-homes-container .search-input {
+.house-suggestion-section .house-suggestion-header .suggested-homes-container .search-input {
   border: none;
   outline: none;
   background-color: var(--BG-Light-Blue, #f5f9ff);
@@ -226,29 +225,34 @@
   font-weight: 500;
   line-height: 150%; /* 24px */
 }
-.house-suggestion-section .divider {
+.house-suggestion-section .house-suggestion-header .home-filter-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+.house-suggestion-section .house-suggestion-header .divider {
   height: 1px;
   background: var(--Border-Dark-Purple, #F0EFFB);
 }
-.house-suggestion-section .location-selector {
+.house-suggestion-section .house-suggestion-header .location-selector {
   display: flex;
   justify-content: space-between;
   align-self: stretch;
   gap: 10px;
   font-size: 14px;
 }
-.house-suggestion-section .location-selector .location-list {
+.house-suggestion-section .house-suggestion-header .location-selector .location-list {
   display: flex;
   gap: 10px;
   line-height: 24px;
 }
-.house-suggestion-section .location-selector .location-label {
+.house-suggestion-section .house-suggestion-header .location-selector .location-label {
   color: var(--Dark-1st, #000929);
   font-weight: 600;
   width: 130px;
   display: flex;
 }
-.house-suggestion-section .location-selector .location-options {
+.house-suggestion-section .house-suggestion-header .location-selector .location-options {
   display: flex;
   gap: 20px;
   color: var(--Text-Light-Grey, rgba(0, 9, 41, 0.5));
@@ -256,14 +260,14 @@
   text-align: center;
   justify-content: space-between;
 }
-.house-suggestion-section .location-selector .location-options:hover {
-  cursor: pointer;
+.house-suggestion-section .house-suggestion-header .location-selector .location-options .location-option:hover {
+  color: #1d61cc;
 }
-.house-suggestion-section .location-selector .selected {
+.house-suggestion-section .house-suggestion-header .location-selector .selected {
   color: var(--Blue-3rd, #1d61cc);
   font-weight: 600;
 }
-.house-suggestion-section .location-selector .location-change {
+.house-suggestion-section .house-suggestion-header .location-selector .location-change {
   display: flex;
   justify-content: end;
   gap: 10px;
@@ -272,28 +276,40 @@
   text-align: center;
   align-items: center;
 }
-.house-suggestion-section .price-filter, .house-suggestion-section .price-acreage-filter, .house-suggestion-section .acreage-filter, .house-suggestion-section .home-type-filter {
+.house-suggestion-section .house-suggestion-header .home-filter {
   display: flex;
-  gap: 10px;
-  justify-content: space-between;
 }
-.house-suggestion-section .price-filter .price-filter-title, .house-suggestion-section .price-acreage-filter .price-filter-title, .house-suggestion-section .acreage-filter .price-filter-title, .house-suggestion-section .home-type-filter .price-filter-title {
+.house-suggestion-section .house-suggestion-header .home-filter .home-filter-section {
+  display: flex;
+  flex-grow: 1;
+}
+.house-suggestion-section .house-suggestion-header .home-filter .price-filter-title {
   color: var(--Dark-1st, #000929);
   font-family: Plus Jakarta Sans, sans-serif;
+  font-size: 14px;
   font-weight: 600;
   line-height: 24px;
-  width: 130px;
+  width: 100%;
+  max-width: 130px;
   display: flex;
+  flex-shrink: 0;
 }
-.house-suggestion-section .price-filter .price-options, .house-suggestion-section .price-acreage-filter .price-options, .house-suggestion-section .acreage-filter .price-options, .house-suggestion-section .home-type-filter .price-options {
-  width: 725px;
+.house-suggestion-section .house-suggestion-header .home-filter .price-options-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  flex-grow: 1;
+}
+.house-suggestion-section .house-suggestion-header .home-filter .price-options {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
+  width: 100%;
+  max-width: 725px;
   gap: 20px;
   font-weight: 500;
   text-align: center;
 }
-.house-suggestion-section .price-filter .price-options .check-box-container, .house-suggestion-section .price-acreage-filter .price-options .check-box-container, .house-suggestion-section .acreage-filter .price-options .check-box-container, .house-suggestion-section .home-type-filter .price-options .check-box-container {
+.house-suggestion-section .house-suggestion-header .home-filter .price-options .check-box-container {
   display: flex;
   align-items: center;
   gap: 5px;
@@ -306,20 +322,21 @@
   position: relative;
   box-sizing: border-box;
 }
-.house-suggestion-section .price-filter .price-options .check-box-container input, .house-suggestion-section .price-acreage-filter .price-options .check-box-container input, .house-suggestion-section .acreage-filter .price-options .check-box-container input, .house-suggestion-section .home-type-filter .price-options .check-box-container input {
+.house-suggestion-section .house-suggestion-header .home-filter .price-options .check-box-container input {
   position: absolute;
   opacity: 0;
   cursor: pointer;
   height: 0;
   width: 0;
 }
-.house-suggestion-section .price-filter .price-options .check-box-container input:checked ~ .checkmark, .house-suggestion-section .price-acreage-filter .price-options .check-box-container input:checked ~ .checkmark, .house-suggestion-section .acreage-filter .price-options .check-box-container input:checked ~ .checkmark, .house-suggestion-section .home-type-filter .price-options .check-box-container input:checked ~ .checkmark {
+.house-suggestion-section .house-suggestion-header .home-filter .price-options .check-box-container input:checked ~ .checkmark {
   background-color: #FF5358;
+  border: 1.5px solid #FF5358;
 }
-.house-suggestion-section .price-filter .price-options .check-box-container input:checked ~ .checkmark:after, .house-suggestion-section .price-acreage-filter .price-options .check-box-container input:checked ~ .checkmark:after, .house-suggestion-section .acreage-filter .price-options .check-box-container input:checked ~ .checkmark:after, .house-suggestion-section .home-type-filter .price-options .check-box-container input:checked ~ .checkmark:after {
+.house-suggestion-section .house-suggestion-header .home-filter .price-options .check-box-container input:checked ~ .checkmark:after {
   display: block;
 }
-.house-suggestion-section .price-filter .price-options .check-box-container .checkmark, .house-suggestion-section .price-acreage-filter .price-options .check-box-container .checkmark, .house-suggestion-section .acreage-filter .price-options .check-box-container .checkmark, .house-suggestion-section .home-type-filter .price-options .check-box-container .checkmark {
+.house-suggestion-section .house-suggestion-header .home-filter .price-options .check-box-container .checkmark {
   position: absolute;
   left: 0;
   width: 20px;
@@ -328,7 +345,7 @@
   border: 1.5px solid var(--Grey-7th, #A9A9A9);
   background-color: var(--Main-Color-White, #FFF);
 }
-.house-suggestion-section .price-filter .price-options .check-box-container .checkmark:after, .house-suggestion-section .price-acreage-filter .price-options .check-box-container .checkmark:after, .house-suggestion-section .acreage-filter .price-options .check-box-container .checkmark:after, .house-suggestion-section .home-type-filter .price-options .check-box-container .checkmark:after {
+.house-suggestion-section .house-suggestion-header .home-filter .price-options .check-box-container .checkmark:after {
   content: "";
   position: absolute;
   display: none;
@@ -340,27 +357,27 @@
   border-width: 0 3px 3px 0;
   transform: rotate(45deg);
 }
-.house-suggestion-section .price-filter .price-options .check-box-container:hover input ~ .checkmark, .house-suggestion-section .price-acreage-filter .price-options .check-box-container:hover input ~ .checkmark, .house-suggestion-section .acreage-filter .price-options .check-box-container:hover input ~ .checkmark, .house-suggestion-section .home-type-filter .price-options .check-box-container:hover input ~ .checkmark {
+.house-suggestion-section .house-suggestion-header .home-filter .price-options .check-box-container:hover input ~ .checkmark {
   background: #ccc;
 }
-.house-suggestion-section .price-filter .price-options .check-box-container:hover input:checked ~ .checkmark, .house-suggestion-section .price-acreage-filter .price-options .check-box-container:hover input:checked ~ .checkmark, .house-suggestion-section .acreage-filter .price-options .check-box-container:hover input:checked ~ .checkmark, .house-suggestion-section .home-type-filter .price-options .check-box-container:hover input:checked ~ .checkmark {
+.house-suggestion-section .house-suggestion-header .home-filter .price-options .check-box-container:hover input:checked ~ .checkmark {
   background: #FF5358;
 }
-.house-suggestion-section .price-filter .price-options.expand, .house-suggestion-section .price-acreage-filter .price-options.expand, .house-suggestion-section .acreage-filter .price-options.expand, .house-suggestion-section .home-type-filter .price-options.expand {
+.house-suggestion-section .house-suggestion-header .home-filter .price-options.expand {
   display: none;
 }
-.house-suggestion-section .price-filter .price-filter-options, .house-suggestion-section .price-acreage-filter .price-filter-options, .house-suggestion-section .acreage-filter .price-filter-options, .house-suggestion-section .home-type-filter .price-filter-options {
+.house-suggestion-section .house-suggestion-header .home-filter .price-filter-options {
   display: none;
   gap: 14px;
   width: 536px;
   align-items: center;
 }
-.house-suggestion-section .price-filter .price-filter-options .price-filter-label, .house-suggestion-section .price-acreage-filter .price-filter-options .price-filter-label, .house-suggestion-section .acreage-filter .price-filter-options .price-filter-label, .house-suggestion-section .home-type-filter .price-filter-options .price-filter-label {
+.house-suggestion-section .house-suggestion-header .home-filter .price-filter-options .price-filter-label {
   color: var(--Text-Light-Grey, rgba(0, 9, 41, 0.5));
   margin: auto 0;
   font: 500 14px Plus Jakarta Sans, -apple-system, Roboto, Helvetica, sans-serif;
 }
-.house-suggestion-section .price-filter .price-filter-options .price-filter-from, .house-suggestion-section .price-acreage-filter .price-filter-options .price-filter-from, .house-suggestion-section .acreage-filter .price-filter-options .price-filter-from, .house-suggestion-section .home-type-filter .price-filter-options .price-filter-from {
+.house-suggestion-section .house-suggestion-header .home-filter .price-filter-options .price-filter-from {
   border-radius: 6px;
   border: 1px solid rgb(169, 169, 169);
   display: flex;
@@ -369,7 +386,7 @@
   flex: 1;
   padding: 10px 12px;
 }
-.house-suggestion-section .price-filter .price-filter-options .price-filter-from .price-filter-from-label, .house-suggestion-section .price-acreage-filter .price-filter-options .price-filter-from .price-filter-from-label, .house-suggestion-section .acreage-filter .price-filter-options .price-filter-from .price-filter-from-label, .house-suggestion-section .home-type-filter .price-filter-options .price-filter-from .price-filter-from-label {
+.house-suggestion-section .house-suggestion-header .home-filter .price-filter-options .price-filter-from .price-filter-from-label {
   width: 100%;
   color: var(--Text-Light-Grey, rgba(0, 9, 41, 0.5));
   letter-spacing: -0.07px;
@@ -378,17 +395,17 @@
   border: none;
   outline: none;
 }
-.house-suggestion-section .price-filter .price-filter-options .price-filter-from .price-filter-from-value, .house-suggestion-section .price-acreage-filter .price-filter-options .price-filter-from .price-filter-from-value, .house-suggestion-section .acreage-filter .price-filter-options .price-filter-from .price-filter-from-value, .house-suggestion-section .home-type-filter .price-filter-options .price-filter-from .price-filter-from-value {
+.house-suggestion-section .house-suggestion-header .home-filter .price-filter-options .price-filter-from .price-filter-from-value {
   color: var(--Blue-Darkest, #03102a);
   margin: auto 0;
   font: 600 12px/120% Plus Jakarta Sans, -apple-system, Roboto, Helvetica, sans-serif;
 }
-.house-suggestion-section .price-filter .price-filter-options .price-filter-separator, .house-suggestion-section .price-acreage-filter .price-filter-options .price-filter-separator, .house-suggestion-section .acreage-filter .price-filter-options .price-filter-separator, .house-suggestion-section .home-type-filter .price-filter-options .price-filter-separator {
+.house-suggestion-section .house-suggestion-header .home-filter .price-filter-options .price-filter-separator {
   color: #000;
   margin: auto 0;
   font: 500 14px Plus Jakarta Sans, -apple-system, Roboto, Helvetica, sans-serif;
 }
-.house-suggestion-section .price-filter .price-filter-options .price-filter-to, .house-suggestion-section .price-acreage-filter .price-filter-options .price-filter-to, .house-suggestion-section .acreage-filter .price-filter-options .price-filter-to, .house-suggestion-section .home-type-filter .price-filter-options .price-filter-to {
+.house-suggestion-section .house-suggestion-header .home-filter .price-filter-options .price-filter-to {
   border-radius: 6px;
   border: 1px solid rgb(169, 169, 169);
   display: flex;
@@ -397,7 +414,7 @@
   flex: 1;
   padding: 10px 12px;
 }
-.house-suggestion-section .price-filter .price-filter-options .price-filter-to .price-filter-to-label, .house-suggestion-section .price-acreage-filter .price-filter-options .price-filter-to .price-filter-to-label, .house-suggestion-section .acreage-filter .price-filter-options .price-filter-to .price-filter-to-label, .house-suggestion-section .home-type-filter .price-filter-options .price-filter-to .price-filter-to-label {
+.house-suggestion-section .house-suggestion-header .home-filter .price-filter-options .price-filter-to .price-filter-to-label {
   color: var(--Text-Light-Grey, rgba(0, 9, 41, 0.5));
   letter-spacing: -0.07px;
   flex: 1;
@@ -406,12 +423,12 @@
   border: none;
   outline: none;
 }
-.house-suggestion-section .price-filter .price-filter-options .price-filter-to .price-filter-to-value, .house-suggestion-section .price-acreage-filter .price-filter-options .price-filter-to .price-filter-to-value, .house-suggestion-section .acreage-filter .price-filter-options .price-filter-to .price-filter-to-value, .house-suggestion-section .home-type-filter .price-filter-options .price-filter-to .price-filter-to-value {
+.house-suggestion-section .house-suggestion-header .home-filter .price-filter-options .price-filter-to .price-filter-to-value {
   color: var(--Blue-Darkest, #03102a);
   margin: auto 0;
   font: 600 12px/120% Plus Jakarta Sans, -apple-system, Roboto, Helvetica, sans-serif;
 }
-.house-suggestion-section .price-filter .price-filter-options .price-filter-apply, .house-suggestion-section .price-acreage-filter .price-filter-options .price-filter-apply, .house-suggestion-section .acreage-filter .price-filter-options .price-filter-apply, .house-suggestion-section .home-type-filter .price-filter-options .price-filter-apply {
+.house-suggestion-section .house-suggestion-header .home-filter .price-filter-options .price-filter-apply {
   border-radius: 6px;
   background-color: var(--Blue-2nd, #002f7a);
   display: flex;
@@ -422,15 +439,15 @@
   justify-content: center;
   padding: 9px 8px;
 }
-.house-suggestion-section .price-filter .price-filter-options .price-filter-apply .price-filter-apply-text, .house-suggestion-section .price-acreage-filter .price-filter-options .price-filter-apply .price-filter-apply-text, .house-suggestion-section .acreage-filter .price-filter-options .price-filter-apply .price-filter-apply-text, .house-suggestion-section .home-type-filter .price-filter-options .price-filter-apply .price-filter-apply-text {
+.house-suggestion-section .house-suggestion-header .home-filter .price-filter-options .price-filter-apply .price-filter-apply-text {
   font-family: Plus Jakarta Sans, sans-serif;
   justify-content: center;
   padding: 3px 10px;
 }
-.house-suggestion-section .price-filter .price-filter-options .price-filter-apply:hover, .house-suggestion-section .price-acreage-filter .price-filter-options .price-filter-apply:hover, .house-suggestion-section .acreage-filter .price-filter-options .price-filter-apply:hover, .house-suggestion-section .home-type-filter .price-filter-options .price-filter-apply:hover {
+.house-suggestion-section .house-suggestion-header .home-filter .price-filter-options .price-filter-apply:hover {
   opacity: 0.8;
 }
-.house-suggestion-section .price-filter .price-filter-options .price-filter-clear, .house-suggestion-section .price-acreage-filter .price-filter-options .price-filter-clear, .house-suggestion-section .acreage-filter .price-filter-options .price-filter-clear, .house-suggestion-section .home-type-filter .price-filter-options .price-filter-clear {
+.house-suggestion-section .house-suggestion-header .home-filter .price-filter-options .price-filter-clear {
   color: var(--Text-Grey, rgba(0, 9, 41, 0.7));
   white-space: nowrap;
   justify-content: center;
@@ -438,35 +455,36 @@
   padding: 3px 10px;
   font: 500 14px Plus Jakarta Sans, -apple-system, Roboto, Helvetica, sans-serif;
 }
-.house-suggestion-section .price-filter .price-filter-options .price-filter-clear:hover, .house-suggestion-section .price-acreage-filter .price-filter-options .price-filter-clear:hover, .house-suggestion-section .acreage-filter .price-filter-options .price-filter-clear:hover, .house-suggestion-section .home-type-filter .price-filter-options .price-filter-clear:hover {
+.house-suggestion-section .house-suggestion-header .home-filter .price-filter-options .price-filter-clear:hover {
   opacity: 0.8;
 }
-.house-suggestion-section .price-filter .more-options, .house-suggestion-section .price-acreage-filter .more-options, .house-suggestion-section .acreage-filter .more-options, .house-suggestion-section .home-type-filter .more-options {
+.house-suggestion-section .house-suggestion-header .home-filter .more-options {
   display: flex;
+  flex-shrink: 0;
   gap: 10px;
   align-items: center;
   cursor: pointer;
 }
-.house-suggestion-section .price-filter .more-options .more-label, .house-suggestion-section .price-acreage-filter .more-options .more-label, .house-suggestion-section .acreage-filter .more-options .more-label, .house-suggestion-section .home-type-filter .more-options .more-label {
+.house-suggestion-section .house-suggestion-header .home-filter .more-options .more-label {
   color: var(--Text-Light-Grey, rgba(0, 9, 41, 0.5));
   text-align: center;
   font-size: 14px;
   font-weight: 500;
 }
-.house-suggestion-section .bedRoom, .house-suggestion-section .WC, .house-suggestion-section .sample, .house-suggestion-section .location {
+.house-suggestion-section .house-suggestion-header .bedRoom, .house-suggestion-section .house-suggestion-header .WC, .house-suggestion-section .house-suggestion-header .sample, .house-suggestion-section .house-suggestion-header .location {
   display: none;
 }
-.house-suggestion-section .filter-wrapper {
+.house-suggestion-section .house-suggestion-header .filter-wrapper {
   justify-content: space-between;
   display: flex;
   width: 100%;
   gap: 15px;
 }
-.house-suggestion-section .filter-wrapper .filter-arrow {
+.house-suggestion-section .house-suggestion-header .filter-wrapper .filter-arrow {
   transition: all 0.3s linear;
 }
-.house-suggestion-section .filter-buttons,
-.house-suggestion-section .default-reset {
+.house-suggestion-section .house-suggestion-header .filter-buttons,
+.house-suggestion-section .house-suggestion-header .default-reset {
   border-radius: 10px;
   border: 2px solid rgb(240, 239, 251);
   background-color: #fff;
@@ -476,19 +494,26 @@
   align-items: center;
   cursor: pointer;
 }
-.house-suggestion-section .filter-text,
-.house-suggestion-section .default-text {
+.house-suggestion-section .house-suggestion-header .filter-text,
+.house-suggestion-section .house-suggestion-header .default-text {
   font-family: Plus Jakarta Sans, sans-serif;
+}
+.house-suggestion-section .house-suggestion-header .results-count {
+  color: var(--Text-Grey, rgba(0, 9, 41, 0.7));
+  text-align: center;
+  margin: auto 0;
+  font: 600 16px Plus Jakarta Sans, -apple-system, Roboto, Helvetica, sans-serif;
+}
+.house-suggestion-section .house-suggestion-header .results-count span {
+  color: var(--Blue-3rd, #1D61CC);
 }
 .house-suggestion-section .interested-post {
   display: flex;
   justify-content: space-between;
 }
-.house-suggestion-section .interested-post .title {
+.house-suggestion-section .interested-post .title .suggested-homes-title {
   color: var(--Main-Color-Black, #000929);
-  display: flex;
   flex: 1;
-  flex-direction: column;
   font-size: 24px;
   font-weight: 700;
   justify-content: center;
@@ -507,39 +532,13 @@
   padding: 11px 25px;
   text-align: center;
 }
-.house-suggestion-section .tag-result {
+.house-suggestion-section .tag-results {
   display: flex;
   align-items: flex-start;
   gap: 10px;
   align-self: stretch;
 }
-.house-suggestion-section .tag-result .sell-tag-result {
-  display: flex;
-  padding: 11px 20px;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-  border-radius: 10px;
-  background: var(--Red-2nd, #FF5358);
-}
-.house-suggestion-section .tag-result .sell-tag-result .sell-tag-text {
-  color: var(--Main-Color-White, #FFF);
-  text-align: center;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: normal;
-}
-.house-suggestion-section .tag-result .sell-tag-result .sell-tag-count {
-  color: var(--Red-Red-Light, #FFF0F0);
-  font-feature-settings: "clig" off, "liga" off;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 800;
-  line-height: 18px; /* 112.5% */
-  letter-spacing: 0.43px;
-}
-.house-suggestion-section .tag-result .buy-tag-result {
+.house-suggestion-section .tag-results .tag-result {
   display: flex;
   padding: 11px 20px;
   align-items: center;
@@ -547,7 +546,7 @@
   border-radius: 10px;
   background: var(--BG-Light-Blue, #F5F9FF);
 }
-.house-suggestion-section .tag-result .buy-tag-result .buy-tag-text {
+.house-suggestion-section .tag-results .tag-result .tag-text {
   color: var(--Text-Black-2nd, #100029);
   text-align: center;
   font-size: 16px;
@@ -555,7 +554,7 @@
   font-weight: 700;
   line-height: normal;
 }
-.house-suggestion-section .tag-result .buy-tag-result .buy-tag-count {
+.house-suggestion-section .tag-results .tag-result .tag-count {
   color: var(--Text-Light-Grey, rgba(0, 9, 41, 0.5));
   font-feature-settings: "clig" off, "liga" off;
   font-size: 16px;
@@ -563,6 +562,15 @@
   font-weight: 800;
   line-height: 18px; /* 112.5% */
   letter-spacing: 0.43px;
+}
+.house-suggestion-section .tag-results .tag-result.active {
+  background: var(--Red-2nd, #FF5358);
+}
+.house-suggestion-section .tag-results .tag-result.active .tag-text {
+  color: var(--Main-Color-White, #FFF);
+}
+.house-suggestion-section .tag-results .tag-result.active .tag-count {
+  color: var(--Red-Red-Light, #FFF0F0);
 }
 .house-suggestion-section .results-sort-container {
   display: flex;
@@ -597,15 +605,6 @@
   font-size: 16px;
   font-style: normal;
   font-weight: 500;
-}
-.house-suggestion-section .results-count {
-  color: var(--Text-Grey, rgba(0, 9, 41, 0.7));
-  text-align: center;
-  margin: auto 0;
-  font: 600 16px Plus Jakarta Sans, -apple-system, Roboto, Helvetica, sans-serif;
-}
-.house-suggestion-section .results-count span {
-  color: var(--Blue-3rd, #1D61CC);
 }
 .house-suggestion-section .sort-container {
   display: flex;
@@ -660,7 +659,6 @@
   border-radius: 9px;
   cursor: pointer;
   background: #F5F9FF;
-  border: none;
   outline: none;
   box-shadow: 0 10px 25px rgba(124, 130, 141, 0.2);
   font-size: 15px;
@@ -711,7 +709,7 @@
   display: flex;
 }
 .house-suggestion-section .property-card .property-details .property-image {
-  width: 30%;
+  width: 313px;
   position: relative;
 }
 .house-suggestion-section .property-card .property-details .property-image img {
@@ -727,10 +725,18 @@
   left: 0;
 }
 .house-suggestion-section .property-card .property-details .property-info {
-  width: 70%;
+  width: 100%;
   display: flex;
   flex-direction: column;
+  gap: 20px;
   padding: 20px 30px;
+  box-sizing: border-box;
+}
+.house-suggestion-section .property-card .property-details .property-info .property-info-header {
+  display: flex;
+  flex-direction: column;
+  gap: 17px;
+  position: relative;
 }
 .house-suggestion-section .property-card .property-details .property-info .status-container.light-green {
   background-color: var(--Green-Light, #f0ffe8);
@@ -741,7 +747,6 @@
   font-weight: 500;
   gap: 7px;
   padding: 5px 15px;
-  margin-bottom: 17px;
   width: fit-content;
 }
 .house-suggestion-section .property-card .property-details .property-info .status-container.light-green .green-dot {
@@ -765,7 +770,6 @@
   font-weight: 500;
   gap: 7px;
   padding: 5px 15px;
-  margin-bottom: 17px;
   width: fit-content;
 }
 .house-suggestion-section .property-card .property-details .property-info .status-container.yellow .yellow-dot {
@@ -789,7 +793,6 @@
   font-weight: 500;
   gap: 7px;
   padding: 5px 15px;
-  margin-bottom: 17px;
   width: fit-content;
 }
 .house-suggestion-section .property-card .property-details .property-info .status-container.success .status-text {
@@ -807,7 +810,6 @@
   font-weight: 500;
   gap: 7px;
   padding: 5px 15px;
-  margin-bottom: 17px;
   width: fit-content;
 }
 .house-suggestion-section .property-card .property-details .property-info .status-container.red .red-dot {
@@ -826,24 +828,12 @@
   color: #000929;
   font: 700 18px/30px "Plus Jakarta Sans", sans-serif;
 }
-.house-suggestion-section .property-card .property-details .property-info .property-location-price {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 17px;
-  gap: 20px;
-}
-.house-suggestion-section .property-card .property-details .property-info .property-location-price .property-location {
+.house-suggestion-section .property-card .property-details .property-info .property-location {
   color: rgba(0, 9, 41, 0.7);
   font: 500 16px/150% "Plus Jakarta Sans", sans-serif;
 }
-.house-suggestion-section .property-card .property-details .property-info .property-location-price .property-price {
-  color: #ec1f25;
-  font: 800 24px "Plus Jakarta Sans", sans-serif;
-  letter-spacing: -0.24px;
-}
 .house-suggestion-section .property-card .property-details .property-info .property-attributes {
   display: flex;
-  margin-top: 5px;
   gap: 8px;
   font-size: 15px;
   line-height: 140%;
@@ -869,17 +859,34 @@
   font-weight: 500;
 }
 .house-suggestion-section .property-card .property-details .property-info .property-price-per-sqm {
-  color: #000929;
-  font-weight: 500;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 5px;
+  position: absolute;
+  right: 0;
+  bottom: 0;
 }
-.house-suggestion-section .property-card .property-details .property-info .property-price-per-sqm span {
+.house-suggestion-section .property-card .property-details .property-info .property-price-per-sqm .property-price {
+  color: var(--Red-Primary, #EC1F25);
+  font-size: 24px;
+  font-weight: 800;
+  letter-spacing: -0.24px;
+}
+.house-suggestion-section .property-card .property-details .property-info .property-price-per-sqm .property-per-sqm {
+  color: var(--Text-Light-Grey, rgba(0, 9, 41, 0.5));
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 140%; /* 21px */
+}
+.house-suggestion-section .property-card .property-details .property-info .property-price-per-sqm .property-per-sqm span {
+  color: var(--Text-Black, #000929);
+  font-size: 15px;
   font-weight: 700;
+  line-height: 140%;
 }
 .house-suggestion-section .property-card .property-details .property-info .sell-tag {
-  display: flex;
   padding: 5px 10px;
-  align-items: center;
-  gap: 5px;
   border-radius: 6px;
   background: var(--Red-2nd, #FF5358);
   color: #FFF;
@@ -887,12 +894,10 @@
   font-weight: 600;
   line-height: normal;
   box-sizing: border-box;
+  margin-right: 6px;
 }
 .house-suggestion-section .property-card .property-details .property-info .confirm-tag {
-  display: flex;
   padding: 5px 10px;
-  align-items: center;
-  gap: 5px;
   border-radius: 6px;
   background: var(--Green-4th, #CDFFB6);
   color: var(--Text-Black, #000929);
@@ -904,12 +909,11 @@
 .house-suggestion-section .property-card .property-separator {
   height: 1px;
   background-color: #f0effb;
-  margin-top: 20px;
 }
 .house-suggestion-section .property-card .property-agent-actions {
+  align-items: center;
   display: flex;
   justify-content: space-between;
-  margin-top: 20px;
   gap: 10px;
   width: 100%;
 }
@@ -1046,10 +1050,7 @@
   stroke: var(--Red-2nd, #FF5358);
 }
 .house-suggestion-section .property-card.buyer .property-info {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  padding: 20px 30px;
+  gap: 15px;
 }
 .house-suggestion-section .property-card.buyer .property-info .property-price-per-sqm {
   color: var(--Text-Light-Grey, rgba(0, 9, 41, 0.5));
@@ -1087,6 +1088,9 @@
 .house-suggestion-section .property-card.buyer .property-info .karo-ai-recommendation .karo-ai-recommendation__header .karo-ai-recommendation__title .karo-ai-recommendation__highlight {
   color: rgb(0, 9, 41);
   font-weight: 500;
+}
+.house-suggestion-section .property-card.buyer .property-info .property-info-header {
+  gap: 15px;
 }
 .house-suggestion-section .pagination {
   display: flex;
