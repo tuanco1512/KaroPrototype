@@ -11,6 +11,7 @@
 .sidebar {
   background-color: var(--Greyscale-Grey-50, #f9fafb);
   display: flex;
+  justify-content: space-between;
   width: 298px;
   height: 100vh;
   flex-direction: column;
@@ -52,6 +53,7 @@
 
   .scroll-box {
     overflow-y: scroll;
+    flex-grow: 1;
 
     .menu-list:hover{
       background: var(--BG-Light-w-Blue, #ebf3ff);
@@ -166,8 +168,6 @@
     color: var(--Main-Color-Secondary, #100a55);
     font-weight: 500;
     line-height: 150%;
-    position: absolute;
-    bottom: 0;
   }
 
   .help {
@@ -969,20 +969,17 @@
           font-size: 15px;
           line-height: 140%;
 
-          .property-type,
-          .property-size {
+          .property-attribute{
             display: flex;
             gap: 8px;
           }
 
-          .property-type-label,
-          .property-size-label {
+          .property-text {
             color: rgba(0, 9, 41, 0.5);
             font-weight: 500;
           }
 
-          .property-type-value,
-          .property-size-value {
+          .property-text-bold {
             color: #000929;
             font-weight: 600;
             letter-spacing: -0.15px;
@@ -1173,13 +1170,7 @@
           }
         }
 
-        .action-phone,
-        .action-heart,
-        .action-share,
-        .action-reset,
-        .action-show-detail,
-        .action-fix,
-        .action-open {
+        .action-btn {
           background-color: #ebf3ff;
           border-radius: 8px;
           padding: 8px 16px;

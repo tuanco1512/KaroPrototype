@@ -10,6 +10,7 @@
 .sidebar {
   background-color: var(--Greyscale-Grey-50, #f9fafb);
   display: flex;
+  justify-content: space-between;
   width: 298px;
   height: 100vh;
   flex-direction: column;
@@ -45,6 +46,7 @@
 }
 .sidebar .scroll-box {
   overflow-y: scroll;
+  flex-grow: 1;
 }
 .sidebar .scroll-box .menu-list:hover {
   background: var(--BG-Light-w-Blue, #ebf3ff);
@@ -140,8 +142,6 @@
   color: var(--Main-Color-Secondary, #100a55);
   font-weight: 500;
   line-height: 150%;
-  position: absolute;
-  bottom: 0;
 }
 .sidebar .help {
   display: flex;
@@ -838,18 +838,15 @@
   font-size: 15px;
   line-height: 140%;
 }
-.house-suggestion-section .property-card .property-details .property-info .property-attributes .property-type,
-.house-suggestion-section .property-card .property-details .property-info .property-attributes .property-size {
+.house-suggestion-section .property-card .property-details .property-info .property-attributes .property-attribute {
   display: flex;
   gap: 8px;
 }
-.house-suggestion-section .property-card .property-details .property-info .property-attributes .property-type-label,
-.house-suggestion-section .property-card .property-details .property-info .property-attributes .property-size-label {
+.house-suggestion-section .property-card .property-details .property-info .property-attributes .property-text {
   color: rgba(0, 9, 41, 0.5);
   font-weight: 500;
 }
-.house-suggestion-section .property-card .property-details .property-info .property-attributes .property-type-value,
-.house-suggestion-section .property-card .property-details .property-info .property-attributes .property-size-value {
+.house-suggestion-section .property-card .property-details .property-info .property-attributes .property-text-bold {
   color: #000929;
   font-weight: 600;
   letter-spacing: -0.15px;
@@ -1014,13 +1011,7 @@
 .house-suggestion-section .property-card .property-agent-actions .property-actions .action-requested:hover {
   opacity: 0.8;
 }
-.house-suggestion-section .property-card .property-agent-actions .property-actions .action-phone,
-.house-suggestion-section .property-card .property-agent-actions .property-actions .action-heart,
-.house-suggestion-section .property-card .property-agent-actions .property-actions .action-share,
-.house-suggestion-section .property-card .property-agent-actions .property-actions .action-reset,
-.house-suggestion-section .property-card .property-agent-actions .property-actions .action-show-detail,
-.house-suggestion-section .property-card .property-agent-actions .property-actions .action-fix,
-.house-suggestion-section .property-card .property-agent-actions .property-actions .action-open {
+.house-suggestion-section .property-card .property-agent-actions .property-actions .action-btn {
   background-color: #ebf3ff;
   border-radius: 8px;
   padding: 8px 16px;
@@ -1034,13 +1025,7 @@
   font-weight: 600;
   line-height: 145%; /* 20.3px */
 }
-.house-suggestion-section .property-card .property-agent-actions .property-actions .action-phone:hover,
-.house-suggestion-section .property-card .property-agent-actions .property-actions .action-heart:hover,
-.house-suggestion-section .property-card .property-agent-actions .property-actions .action-share:hover,
-.house-suggestion-section .property-card .property-agent-actions .property-actions .action-reset:hover,
-.house-suggestion-section .property-card .property-agent-actions .property-actions .action-show-detail:hover,
-.house-suggestion-section .property-card .property-agent-actions .property-actions .action-fix:hover,
-.house-suggestion-section .property-card .property-agent-actions .property-actions .action-open:hover {
+.house-suggestion-section .property-card .property-agent-actions .property-actions .action-btn:hover {
   opacity: 0.8;
 }
 .house-suggestion-section .property-card .property-agent-actions .property-actions .action-heart.clicked svg {
